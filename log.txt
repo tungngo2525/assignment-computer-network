@@ -1,0 +1,1478 @@
+[tung:8001] Created/Verified user folder: tung
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[tung:8001] New connection from ('172.17.240.168', 55312)
+[tung:8001] Connection stabilized for ('172.17.240.168', 55312)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 55312)
+[tung:8001] Raw data received from ('172.17.240.168', 55312): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;"}
+[tung:8001] Parsed JSON from ('172.17.240.168', 55312): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;'}
+[tung:8001] Received friend list: tung:8001:online;
+[tung:8001] Connection closed from ('172.17.240.168', 55312)
+[hung:8002] Created/Verified user folder: hung
+[hung:8002] Peer registered with central server on port 8002
+[hung:8002] Peer started on port 8002
+[tung:8001] New connection from ('172.17.240.168', 55318)
+[hung:8002] New connection from ('172.17.240.168', 55319)
+[tung:8001] Connection stabilized for ('172.17.240.168', 55318)
+[hung:8002] Connection stabilized for ('172.17.240.168', 55319)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 55318)
+[hung:8002] Starting recv_input_stream for ('172.17.240.168', 55319)
+[tung:8001] Raw data received from ('172.17.240.168', 55318): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;"}
+[hung:8002] Raw data received from ('172.17.240.168', 55319): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;"}
+[tung:8001] Parsed JSON from ('172.17.240.168', 55318): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;'}
+[hung:8002] Parsed JSON from ('172.17.240.168', 55319): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;'}
+[tung:8001] Received friend list: tung:8001:online;hung:8002:online;
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;
+[tung:8001] Connection closed from ('172.17.240.168', 55318)
+[hung:8002] Connection closed from ('172.17.240.168', 55319)
+[tung:8001] Connected to peer at port 8002
+[hung:8002] New connection from ('172.17.240.168', 55320)
+[tung:8001] Sent connect request to port 8002: {"type": "connect", "name": "tung"}
+
+[tung:8001] Sent fetch request to port 8002: {"type": "fetch", "name": "tung"}
+
+[hung:8002] Connection stabilized for ('172.17.240.168', 55320)
+[hung:8002] Starting recv_input_stream for ('172.17.240.168', 55320)
+[hung:8002] Raw data received from ('172.17.240.168', 55320): {"type": "connect", "name": "tung"}
+{"type": "fetch", "name": "tung"}
+
+[hung:8002] Parsed JSON from ('172.17.240.168', 55320): {'type': 'connect', 'name': 'tung'}
+[hung:8002] Peer tung requested connection
+[hung:8002] Parsed JSON from ('172.17.240.168', 55320): {'type': 'fetch', 'name': 'tung'}
+[tung:8001] New connection from ('172.17.240.168', 55321)
+[hung:8002] Connected to peer at port 8001
+[hung:8002] Sent connect request to port 8001: {"type": "connect", "name": "hung"}
+
+[hung:8002] Sent fetch request to port 8001: {"type": "fetch", "name": "hung"}
+
+[tung:8001] Connection stabilized for ('172.17.240.168', 55321)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 55321)
+[tung:8001] Raw data received from ('172.17.240.168', 55321): {"type": "connect", "name": "hung"}
+{"type": "fetch", "name": "hung"}
+
+[tung:8001] Parsed JSON from ('172.17.240.168', 55321): {'type': 'connect', 'name': 'hung'}
+[tung:8001] Peer hung requested connection
+[tung:8001] Parsed JSON from ('172.17.240.168', 55321): {'type': 'fetch', 'name': 'hung'}
+[tung:8001] Preparing to send file: Báo cáo Lab 3.pdf
+[hung:8002] Raw data received from ('172.17.240.168', 55320): {"name": "tung", "type": "file", "filename": "B\u00e1o c\u00e1o Lab 3.pdf"}
+
+[hung:8002] Parsed JSON from ('172.17.240.168', 55320): {'name': 'tung', 'type': 'file', 'filename': 'Báo cáo Lab 3.pdf'}
+[hung:8002] Start receiving file: Báo cáo Lab 3.pdf to hung\Báo cáo Lab 3.pdf
+[hung:8002] Queued file: Báo cáo Lab 3.pdf from tung on port 55323
+[tung:8001] Successfully sent file: Báo cáo Lab 3.pdf to port 8002
+[hung:8002] File received successfully: Báo cáo Lab 3.pdf to hung\Báo cáo Lab 3.pdf
+[tung:8001] Sent message: hi
+[hung:8002] Raw data received from ('172.17.240.168', 55320): {"name": "tung", "type": "chat", "message": "hi"}
+
+[hung:8002] Parsed JSON from ('172.17.240.168', 55320): {'name': 'tung', 'type': 'chat', 'message': 'hi'}
+[hung:8002] Received chat from tung: hi
+[tung:8001] Preparing to send file: LAB3_CONFORMAL.pptx
+[hung:8002] Raw data received from ('172.17.240.168', 55320): {"name": "tung", "type": "file", "filename": "LAB3_CONFORMAL.pptx"}
+
+[hung:8002] Parsed JSON from ('172.17.240.168', 55320): {'name': 'tung', 'type': 'file', 'filename': 'LAB3_CONFORMAL.pptx'}
+[hung:8002] Start receiving file: LAB3_CONFORMAL.pptx to hung\LAB3_CONFORMAL.pptx
+[hung:8002] Queued file: LAB3_CONFORMAL.pptx from tung on port 55326
+[tung:8001] Successfully sent file: LAB3_CONFORMAL.pptx to port 8002
+[hung:8002] File received successfully: LAB3_CONFORMAL.pptx to hung\LAB3_CONFORMAL.pptx
+[hung:8002] Peer shutting down.
+[tung:8001] Connection closed from ('172.17.240.168', 55321)
+[tung:8001] New connection from ('172.17.240.168', 55330)
+[tung:8001] Connection stabilized for ('172.17.240.168', 55330)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 55330)
+[tung:8001] Raw data received from ('172.17.240.168', 55330): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:offline;"}
+[tung:8001] Parsed JSON from ('172.17.240.168', 55330): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:offline;'}
+[tung:8001] Received friend list: tung:8001:online;hung:8002:offline;
+[tung:8001] Connection closed from ('172.17.240.168', 55330)
+[hung:8002] Created/Verified user folder: hung
+[hung:8002] Peer registered with central server on port 8002
+[hung:8002] Peer started on port 8002
+[tung:8001] New connection from ('172.17.240.168', 55336)
+[hung:8002] New connection from ('172.17.240.168', 55337)
+[tung:8001] Connection stabilized for ('172.17.240.168', 55336)
+[hung:8002] Connection stabilized for ('172.17.240.168', 55337)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 55336)
+[hung:8002] Raw data received from ('172.17.240.168', 55337): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;"}
+[tung:8001] Raw data received from ('172.17.240.168', 55336): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;"}
+[hung:8002] Parsed JSON from ('172.17.240.168', 55337): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;'}
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;
+[tung:8001] Parsed JSON from ('172.17.240.168', 55336): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;'}
+[hung:8002] Connection closed from ('172.17.240.168', 55337)
+[tung:8001] Received friend list: tung:8001:online;hung:8002:online;
+[tung:8001] Connection closed from ('172.17.240.168', 55336)
+[hung:8002] Sent message: hi
+[hung:8002] Connected to peer at port 8001
+[tung:8001] New connection from ('172.17.240.168', 55341)
+[hung:8002] Sent connect request to port 8001: {"type": "connect", "name": "hung"}
+
+[hung:8002] Sent fetch request to port 8001: {"type": "fetch", "name": "hung"}
+
+[tung:8001] Connection stabilized for ('172.17.240.168', 55341)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 55341)
+[tung:8001] Raw data received from ('172.17.240.168', 55341): {"type": "connect", "name": "hung"}
+{"type": "fetch", "name": "hung"}
+
+[tung:8001] Parsed JSON from ('172.17.240.168', 55341): {'type': 'connect', 'name': 'hung'}
+[tung:8001] Peer hung requested connection
+[tung:8001] Parsed JSON from ('172.17.240.168', 55341): {'type': 'fetch', 'name': 'hung'}
+[tung:8001] Responded to fetch request from hung
+[tung:8001] Existing connection to port 8002 is still active, sending connect request
+[tung:8001] Sent connect request to port 8002: {"type": "connect", "name": "tung"}
+
+[hung:8002] Sent message: hi
+[tung:8001] Raw data received from ('172.17.240.168', 55341): {"name": "hung", "type": "chat", "message": "hi"}
+
+[tung:8001] Parsed JSON from ('172.17.240.168', 55341): {'name': 'hung', 'type': 'chat', 'message': 'hi'}
+[tung:8001] Received chat from hung: hi
+[hung:8002] Sent message: hi
+[tung:8001] Raw data received from ('172.17.240.168', 55341): {"name": "hung", "type": "chat", "message": "hi"}
+
+[tung:8001] Parsed JSON from ('172.17.240.168', 55341): {'name': 'hung', 'type': 'chat', 'message': 'hi'}
+[tung:8001] Received chat from hung: hi
+[hung:8002] Sent message: hi
+[tung:8001] Raw data received from ('172.17.240.168', 55341): {"name": "hung", "type": "chat", "message": "hi"}
+
+[tung:8001] Parsed JSON from ('172.17.240.168', 55341): {'name': 'hung', 'type': 'chat', 'message': 'hi'}
+[tung:8001] Received chat from hung: hi
+[hung:8002] Sent message: hi
+[tung:8001] Raw data received from ('172.17.240.168', 55341): {"name": "hung", "type": "chat", "message": "hi"}
+
+[tung:8001] Parsed JSON from ('172.17.240.168', 55341): {'name': 'hung', 'type': 'chat', 'message': 'hi'}
+[tung:8001] Received chat from hung: hi
+[hung:8002] Sent message: @bot
+[tung:8001] Raw data received from ('172.17.240.168', 55341): {"name": "hung", "type": "chat", "message": "@bot"}
+
+[tung:8001] Parsed JSON from ('172.17.240.168', 55341): {'name': 'hung', 'type': 'chat', 'message': '@bot'}
+[tung:8001] Received chat from hung: @bot
+[hung:8002] Bot responded: Bot error: 
+  No API_KEY or ADC found. Please either:
+    - Set the `GOOGLE_API_KEY` environment variable.
+    - Manually pass the key with `genai.configure(api_key=my_api_key)`.
+    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.
+[tung:8001] Created/Verified user folder: tung
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[tung:8001] New connection from ('172.17.240.168', 55371)
+[tung:8001] Connection stabilized for ('172.17.240.168', 55371)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 55371)
+[tung:8001] Raw data received from ('172.17.240.168', 55371): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;"}
+[tung:8001] Parsed JSON from ('172.17.240.168', 55371): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;'}
+[tung:8001] Received friend list: tung:8001:online;
+[tung:8001] Connection closed from ('172.17.240.168', 55371)
+[hung:8002] Created/Verified user folder: hung
+[hung:8002] Peer registered with central server on port 8002
+[hung:8002] Peer started on port 8002
+[tung:8001] New connection from ('172.17.240.168', 55377)
+[hung:8002] New connection from ('172.17.240.168', 55378)
+[hung:8002] Connection stabilized for ('172.17.240.168', 55378)
+[tung:8001] Connection stabilized for ('172.17.240.168', 55377)
+[hung:8002] Starting recv_input_stream for ('172.17.240.168', 55378)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 55377)
+[hung:8002] Raw data received from ('172.17.240.168', 55378): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;"}
+[tung:8001] Raw data received from ('172.17.240.168', 55377): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;"}
+[hung:8002] Parsed JSON from ('172.17.240.168', 55378): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;'}
+[tung:8001] Parsed JSON from ('172.17.240.168', 55377): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;'}
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;
+[tung:8001] Received friend list: tung:8001:online;hung:8002:online;
+[hung:8002] Connection closed from ('172.17.240.168', 55378)
+[tung:8001] Connection closed from ('172.17.240.168', 55377)
+[tung:8001] Connected to peer at port 8002
+[hung:8002] New connection from ('172.17.240.168', 55379)
+[tung:8001] Sent connect request to port 8002: {"type": "connect", "name": "tung"}
+
+[tung:8001] Sent fetch request to port 8002: {"type": "fetch", "name": "tung"}
+
+[hung:8002] Connection stabilized for ('172.17.240.168', 55379)
+[hung:8002] Starting recv_input_stream for ('172.17.240.168', 55379)
+[hung:8002] Raw data received from ('172.17.240.168', 55379): {"type": "connect", "name": "tung"}
+{"type": "fetch", "name": "tung"}
+
+[hung:8002] Parsed JSON from ('172.17.240.168', 55379): {'type': 'connect', 'name': 'tung'}
+[hung:8002] Peer tung requested connection
+[hung:8002] Parsed JSON from ('172.17.240.168', 55379): {'type': 'fetch', 'name': 'tung'}
+[hung:8002] Connected to peer at port 8001
+[tung:8001] New connection from ('172.17.240.168', 55380)
+[hung:8002] Sent connect request to port 8001: {"type": "connect", "name": "hung"}
+
+[hung:8002] Sent fetch request to port 8001: {"type": "fetch", "name": "hung"}
+
+[tung:8001] Connection stabilized for ('172.17.240.168', 55380)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 55380)
+[tung:8001] Raw data received from ('172.17.240.168', 55380): {"type": "connect", "name": "hung"}
+{"type": "fetch", "name": "hung"}
+
+[tung:8001] Parsed JSON from ('172.17.240.168', 55380): {'type': 'connect', 'name': 'hung'}
+[tung:8001] Peer hung requested connection
+[tung:8001] Parsed JSON from ('172.17.240.168', 55380): {'type': 'fetch', 'name': 'hung'}
+[tung:8001] Sent message: hi
+[hung:8002] Raw data received from ('172.17.240.168', 55379): {"name": "tung", "type": "chat", "message": "hi"}
+
+[hung:8002] Parsed JSON from ('172.17.240.168', 55379): {'name': 'tung', 'type': 'chat', 'message': 'hi'}
+[hung:8002] Received chat from tung: hi
+[hung:8002] Sent message: hi
+[tung:8001] Raw data received from ('172.17.240.168', 55380): {"name": "hung", "type": "chat", "message": "hi"}
+
+[tung:8001] Parsed JSON from ('172.17.240.168', 55380): {'name': 'hung', 'type': 'chat', 'message': 'hi'}
+[tung:8001] Received chat from hung: hi
+[tung:8001] Preparing to send file: Báo cáo Lab 3.pdf
+[hung:8002] Raw data received from ('172.17.240.168', 55379): {"name": "tung", "type": "file", "filename": "B\u00e1o c\u00e1o Lab 3.pdf"}
+
+[hung:8002] Parsed JSON from ('172.17.240.168', 55379): {'name': 'tung', 'type': 'file', 'filename': 'Báo cáo Lab 3.pdf'}
+[hung:8002] Queued file: Báo cáo Lab 3.pdf from tung on port 55383
+[hung:8002] Start receiving file: Báo cáo Lab 3.pdf to hung\Báo cáo Lab 3.pdf
+[hung:8002] Peer shutting down.
+[hung:8002] Error accepting connection: [WinError 10038] An operation was attempted on something that is not a socket
+[tung:8001] Connection closed from ('172.17.240.168', 55380)
+[hung:8002] Error receiving file Báo cáo Lab 3.pdf: [WinError 10038] An operation was attempted on something that is not a socket
+t a socket
+[tung:8001] New connection from ('172.17.240.168', 55385)
+[tung:8001] Connection stabilized for ('172.17.240.168', 55385)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 55385)
+[tung:8001] Created/Verified user folder: tung
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[tung:8001] New connection from ('172.17.240.168', 55450)
+[tung:8001] Connection stabilized for ('172.17.240.168', 55450)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 55450)
+[tung:8001] Raw data received from ('172.17.240.168', 55450): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;"}
+[tung:8001] Parsed JSON from ('172.17.240.168', 55450): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;'}
+[tung:8001] Received friend list: tung:8001:online;
+[tung:8001] Connection closed from ('172.17.240.168', 55450)
+[hung:8002] Created/Verified user folder: hung
+[hung:8002] Peer registered with central server on port 8002
+[hung:8002] Peer started on port 8002
+[tung:8001] New connection from ('172.17.240.168', 55455)
+[hung:8002] New connection from ('172.17.240.168', 55456)
+[hung:8002] Connection stabilized for ('172.17.240.168', 55456)
+[tung:8001] Connection stabilized for ('172.17.240.168', 55455)
+[hung:8002] Starting recv_input_stream for ('172.17.240.168', 55456)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 55455)
+[hung:8002] Raw data received from ('172.17.240.168', 55456): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;"}
+[tung:8001] Raw data received from ('172.17.240.168', 55455): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;"}
+[hung:8002] Parsed JSON from ('172.17.240.168', 55456): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;'}
+[tung:8001] Parsed JSON from ('172.17.240.168', 55455): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;'}
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;
+[tung:8001] Received friend list: tung:8001:online;hung:8002:online;
+[hung:8002] Connection closed from ('172.17.240.168', 55456)
+[tung:8001] Connection closed from ('172.17.240.168', 55455)
+[tung:8001] Connected to peer at port 8002
+[hung:8002] New connection from ('172.17.240.168', 55457)
+[tung:8001] Sent connect request to port 8002: {"type": "connect", "name": "tung"}
+
+[tung:8001] Sent fetch request to port 8002: {"type": "fetch", "name": "tung"}
+
+[hung:8002] Connection stabilized for ('172.17.240.168', 55457)
+[hung:8002] Starting recv_input_stream for ('172.17.240.168', 55457)
+[hung:8002] Raw data received from ('172.17.240.168', 55457): {"type": "connect", "name": "tung"}
+{"type": "fetch", "name": "tung"}
+
+[hung:8002] Parsed JSON from ('172.17.240.168', 55457): {'type': 'connect', 'name': 'tung'}
+[hung:8002] Peer tung requested connection
+[hung:8002] Parsed JSON from ('172.17.240.168', 55457): {'type': 'fetch', 'name': 'tung'}
+[hung:8002] Connected to peer at port 8001
+[tung:8001] New connection from ('172.17.240.168', 55459)
+[hung:8002] Sent connect request to port 8001: {"type": "connect", "name": "hung"}
+
+[hung:8002] Sent fetch request to port 8001: {"type": "fetch", "name": "hung"}
+
+[tung:8001] Connection stabilized for ('172.17.240.168', 55459)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 55459)
+[tung:8001] Raw data received from ('172.17.240.168', 55459): {"type": "connect", "name": "hung"}
+{"type": "fetch", "name": "hung"}
+
+[tung:8001] Parsed JSON from ('172.17.240.168', 55459): {'type': 'connect', 'name': 'hung'}
+[tung:8001] Peer hung requested connection
+[tung:8001] Parsed JSON from ('172.17.240.168', 55459): {'type': 'fetch', 'name': 'hung'}
+[tung:8001] Sent message: hi
+[hung:8002] Raw data received from ('172.17.240.168', 55457): {"name": "tung", "type": "chat", "message": "hi"}
+
+[hung:8002] Parsed JSON from ('172.17.240.168', 55457): {'name': 'tung', 'type': 'chat', 'message': 'hi'}
+[hung:8002] Received chat from tung: hi
+[hung:8002] Sent message: hi
+[tung:8001] Raw data received from ('172.17.240.168', 55459): {"name": "hung", "type": "chat", "message": "hi"}
+
+[tung:8001] Parsed JSON from ('172.17.240.168', 55459): {'name': 'hung', 'type': 'chat', 'message': 'hi'}
+[tung:8001] Received chat from hung: hi
+[tung:8001] Preparing to send file: Báo cáo Lab 3.pdf
+[hung:8002] Raw data received from ('172.17.240.168', 55457): {"name": "tung", "type": "file", "filename": "B\u00e1o c\u00e1o Lab 3.pdf"}
+
+[hung:8002] Parsed JSON from ('172.17.240.168', 55457): {'name': 'tung', 'type': 'file', 'filename': 'Báo cáo Lab 3.pdf'}
+[hung:8002] Start receiving file: Báo cáo Lab 3.pdf to hung\Báo cáo Lab 3.pdf
+[hung:8002] Queued file: Báo cáo Lab 3.pdf from tung on port 55461
+[hung:8002] Timeout waiting for file Báo cáo Lab 3.pdf from tung
+[hung:8002] Connection to ('172.17.240.168', 55457) closed by peer
+[tung:8001] Created/Verified user folder: tung
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[tung:8001] New connection from ('172.17.240.168', 55566)
+[tung:8001] Connection stabilized for ('172.17.240.168', 55566)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 55566)
+[tung:8001] Raw data received from ('172.17.240.168', 55566): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;"}
+[tung:8001] Parsed JSON from ('172.17.240.168', 55566): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;'}
+[tung:8001] Received friend list: tung:8001:online;
+[tung:8001] Connection closed from ('172.17.240.168', 55566)
+[tung:8001] Sent message: hi
+[hung:8002] Created/Verified user folder: hung
+[hung:8002] Peer registered with central server on port 8002
+[hung:8002] Peer started on port 8002
+[tung:8001] New connection from ('172.17.240.168', 55571)
+[hung:8002] New connection from ('172.17.240.168', 55572)
+[hung:8002] Connection stabilized for ('172.17.240.168', 55572)
+[tung:8001] Connection stabilized for ('172.17.240.168', 55571)
+[hung:8002] Starting recv_input_stream for ('172.17.240.168', 55572)
+[hung:8002] Raw data received from ('172.17.240.168', 55572): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;"}
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 55571)
+[hung:8002] Parsed JSON from ('172.17.240.168', 55572): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;'}
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;
+[tung:8001] Raw data received from ('172.17.240.168', 55571): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;"}
+[hung:8002] Connection closed from ('172.17.240.168', 55572)
+[tung:8001] Parsed JSON from ('172.17.240.168', 55571): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;'}
+[tung:8001] Received friend list: tung:8001:online;hung:8002:online;
+[tung:8001] Connection closed from ('172.17.240.168', 55571)
+[hung:8002] New connection from ('172.17.240.168', 55576)
+[tung:8001] Connected to peer at port 8002
+[tung:8001] Sent connect request to port 8002: {"type": "connect", "name": "tung"}
+
+[tung:8001] Sent fetch request to port 8002: {"type": "fetch", "name": "tung"}
+
+[hung:8002] Connection stabilized for ('172.17.240.168', 55576)
+[hung:8002] Starting recv_input_stream for ('172.17.240.168', 55576)
+[hung:8002] Raw data received from ('172.17.240.168', 55576): {"type": "connect", "name": "tung"}
+{"type": "fetch", "name": "tung"}
+
+[hung:8002] Parsed JSON from ('172.17.240.168', 55576): {'type': 'connect', 'name': 'tung'}
+[hung:8002] Peer tung requested connection
+[hung:8002] Parsed JSON from ('172.17.240.168', 55576): {'type': 'fetch', 'name': 'tung'}
+[hung:8002] Connected to peer at port 8001
+[tung:8001] New connection from ('172.17.240.168', 55577)
+[hung:8002] Sent connect request to port 8001: {"type": "connect", "name": "hung"}
+
+[hung:8002] Sent fetch request to port 8001: {"type": "fetch", "name": "hung"}
+
+[tung:8001] Connection stabilized for ('172.17.240.168', 55577)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 55577)
+[tung:8001] Raw data received from ('172.17.240.168', 55577): {"type": "connect", "name": "hung"}
+{"type": "fetch", "name": "hung"}
+
+[tung:8001] Parsed JSON from ('172.17.240.168', 55577): {'type': 'connect', 'name': 'hung'}
+[tung:8001] Peer hung requested connection
+[tung:8001] Parsed JSON from ('172.17.240.168', 55577): {'type': 'fetch', 'name': 'hung'}
+[tung:8001] Responded to fetch request from hung
+[tung:8001] Sent message: hi
+[hung:8002] Raw data received from ('172.17.240.168', 55576): {"name": "tung", "type": "chat", "message": "hi"}
+
+[hung:8002] Parsed JSON from ('172.17.240.168', 55576): {'name': 'tung', 'type': 'chat', 'message': 'hi'}
+[hung:8002] Received chat from tung: hi
+[hung:8002] Sent message: hi
+[tung:8001] Raw data received from ('172.17.240.168', 55577): {"name": "hung", "type": "chat", "message": "hi"}
+
+[tung:8001] Parsed JSON from ('172.17.240.168', 55577): {'name': 'hung', 'type': 'chat', 'message': 'hi'}
+[tung:8001] Received chat from hung: hi
+[tung:8001] Sent message: @bot
+[hung:8002] Raw data received from ('172.17.240.168', 55576): {"name": "tung", "type": "chat", "message": "@bot"}
+
+[hung:8002] Parsed JSON from ('172.17.240.168', 55576): {'name': 'tung', 'type': 'chat', 'message': '@bot'}
+[hung:8002] Received chat from tung: @bot
+[tung:8001] Bot responded: Bot error: 
+  No API_KEY or ADC found. Please either:
+    - Set the `GOOGLE_API_KEY` environment variable.
+    - Manually pass the key with `genai.configure(api_key=my_api_key)`.
+    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.
+[hung:8002] Connection to ('172.17.240.168', 55576) closed by peer
+[tung:8001] Created/Verified user folder: tung
+[tung:8001] Attempt 1/3 to connect to central server failed: [WinError 10061] No connection could be made because the target machine actively refused it
+[tung:8001] Sent message: hi
+[tung:8001] Attempt 2/3 to connect to central server failed: [WinError 10061] No connection could be made because the target machine actively refused it
+[tung:8001] Attempt 3/3 to connect to central server failed: [WinError 10061] No connection could be made because the target machine actively refused it
+[tung:8001] Peer started on port 8001
+[tung:8001] Peer shutting down.
+[tung:8001] Created/Verified user folder: tung
+[tung:8001] Attempt 1/3 to connect to central server failed: [WinError 10061] No connection could be made because the target machine actively refused it
+[tung:8001] Attempt 2/3 to connect to central server failed: [WinError 10061] No connection could be made because the target machine actively refused it
+[tung:8001] Attempt 3/3 to connect to central server failed: [WinError 10061] No connection could be made because the target machine actively refused it
+[tung:8001] Peer started on port 8001
+[tung:8001] Peer shutting down.
+[tung:7002] Created/Verified user folder: tung
+[tung:7002] Peer registered with central server on port 7002
+[tung:7002] Peer started on port 7002
+[tung:7002] New connection from ('172.17.240.168', 55868)
+[tung:7002] Connection stabilized for ('172.17.240.168', 55868)
+[tung:7002] Starting recv_input_stream for ('172.17.240.168', 55868)
+[tung:7002] Raw data received from ('172.17.240.168', 55868): {"name": "HCMUT", "type": "central", "listFriend": "tung:7002:online;"}
+[tung:7002] Parsed JSON from ('172.17.240.168', 55868): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:7002:online;'}
+[tung:7002] Received friend list: tung:7002:online;
+[tung:7002] Connection closed from ('172.17.240.168', 55868)
+[tung:7002] Sent message: hi
+[tung:7002] Sent message: @bot
+[tung:7002] Bot responded: Bot error: 
+  No API_KEY or ADC found. Please either:
+    - Set the `GOOGLE_API_KEY` environment variable.
+    - Manually pass the key with `genai.configure(api_key=my_api_key)`.
+    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.
+[tung:7002] Peer shutting down.
+[tung:8001] Error saving config: [Errno 2] No such file or directory: 'tung\\user_config.json'
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[tung:8001] New connection from ('172.17.240.168', 64827)
+[tung:8001] Connection stabilized for ('172.17.240.168', 64827)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 64827)
+[tung:8001] Raw data received from ('172.17.240.168', 64827): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;"}
+[tung:8001] Parsed JSON from ('172.17.240.168', 64827): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;'}
+[tung:8001] Received friend list: tung:8001:online;
+[tung:8001] Connection closed from ('172.17.240.168', 64827)
+[hung:8002] Error saving config: [Errno 2] No such file or directory: 'hung\\user_config.json'
+[hung:8002] Peer registered with central server on port 8002
+[hung:8002] Peer started on port 8002
+[hung:8002] New connection from ('172.17.240.168', 64836)
+[hung:8002] Connection stabilized for ('172.17.240.168', 64836)
+[hung:8002] Starting recv_input_stream for ('172.17.240.168', 64836)
+[hung:8002] Raw data received from ('172.17.240.168', 64836): {"name": "HCMUT", "type": "central", "listFriend": "hung:8002:online;"}
+[hung:8002] Parsed JSON from ('172.17.240.168', 64836): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'hung:8002:online;'}
+[hung:8002] Received friend list: hung:8002:online;
+[hung:8002] Connection closed from ('172.17.240.168', 64836)
+[tung:8001] Error saving config: [Errno 2] No such file or directory: 'tung\\user_config.json'
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[tung:8001] New connection from ('172.17.240.168', 64847)
+[tung:8001] Connection stabilized for ('172.17.240.168', 64847)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 64847)
+[tung:8001] Raw data received from ('172.17.240.168', 64847): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;"}
+[tung:8001] Parsed JSON from ('172.17.240.168', 64847): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;'}
+[tung:8001] Received friend list: tung:8001:online;
+[tung:8001] Connection closed from ('172.17.240.168', 64847)
+[tung:8001] Peer shutting down.
+[tung:8001] Created/Verified user folder: tung
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[tung:8001] New connection from ('172.17.240.168', 64857)
+[tung:8001] Connection stabilized for ('172.17.240.168', 64857)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 64857)
+[tung:8001] Raw data received from ('172.17.240.168', 64857): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;"}
+[tung:8001] Parsed JSON from ('172.17.240.168', 64857): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;'}
+[tung:8001] Received friend list: tung:8001:online;
+[tung:8001] Connection closed from ('172.17.240.168', 64857)
+[tung:8001] Peer shutting down.
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[tung:8001] New connection from ('172.17.240.168', 64874)
+[tung:8001] Connection stabilized for ('172.17.240.168', 64874)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 64874)
+[tung:8001] Raw data received from ('172.17.240.168', 64874): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;"}
+[tung:8001] Parsed JSON from ('172.17.240.168', 64874): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;'}
+[tung:8001] Received friend list: tung:8001:online;
+[tung:8001] Connection closed from ('172.17.240.168', 64874)
+[tung:8001] Sent message: hi
+[tung:8001] Sent message: @bot
+[tung:8001] Bot responded: How can I help you?
+
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[tung:8001] New connection from ('172.17.240.168', 64894)
+[tung:8001] Connection stabilized for ('172.17.240.168', 64894)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 64894)
+[tung:8001] Raw data received from ('172.17.240.168', 64894): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;"}
+[tung:8001] Parsed JSON from ('172.17.240.168', 64894): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;'}
+[tung:8001] Received friend list: tung:8001:online;
+[tung:8001] Connection closed from ('172.17.240.168', 64894)
+[tung:8001] Sent message: @bot hôm nay tôi buồn
+[tung:8001] Bot responded: Tôi rất tiếc khi nghe bạn nói rằng hôm nay bạn buồn. Có chuyện gì khiến bạn cảm thấy như vậy không? Nếu bạn muốn chia sẻ, tôi sẵn sàng lắng nghe.  Nếu không muốn nói, cũng không sao cả.  Chỉ cần biết rằng bạn không cô đơn và có nhiều nguồn hỗ trợ nếu bạn cần.  
+
+Bạn có muốn thử làm điều gì đó để cảm thấy tốt hơn không? Ví dụ như nghe nhạc, xem phim, đọc sách, đi dạo hoặc nói chuyện với ai đó bạn yêu quý?
+
+[tung:8001] Peer shutting down.
+[tung:8001] Error saving config: [Errno 2] No such file or directory: 'tung\\user_config.json'
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[tung:8001] New connection from ('172.17.240.168', 64925)
+[tung:8001] Connection stabilized for ('172.17.240.168', 64925)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 64925)
+[tung:8001] Raw data received from ('172.17.240.168', 64925): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;"}
+[tung:8001] Parsed JSON from ('172.17.240.168', 64925): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;'}
+[tung:8001] Received friend list: tung:8001:online;
+[tung:8001] Connection closed from ('172.17.240.168', 64925)
+[tung:8001] Error saving config: [Errno 2] No such file or directory: 'tung\\user_config.json'
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[tung:8001] New connection from ('172.17.240.168', 64934)
+[tung:8001] Connection stabilized for ('172.17.240.168', 64934)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 64934)
+[tung:8001] Raw data received from ('172.17.240.168', 64934): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;"}
+[tung:8001] Parsed JSON from ('172.17.240.168', 64934): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;'}
+[tung:8001] Received friend list: tung:8001:online;
+[tung:8001] Connection closed from ('172.17.240.168', 64934)
+[tung:8001] Error saving config: [Errno 2] No such file or directory: 'tung\\user_config.json'
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[tung:8001] New connection from ('172.17.240.168', 64964)
+[tung:8001] Connection stabilized for ('172.17.240.168', 64964)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 64964)
+[tung:8001] Raw data received from ('172.17.240.168', 64964): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;"}
+[tung:8001] Parsed JSON from ('172.17.240.168', 64964): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;'}
+[tung:8001] Received friend list: tung:8001:online;
+[tung:8001] Connection closed from ('172.17.240.168', 64964)
+[tung:8001] Created/Verified user folder: tung
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[tung:8001] New connection from ('172.17.240.168', 64972)
+[tung:8001] Connection stabilized for ('172.17.240.168', 64972)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 64972)
+[tung:8001] Raw data received from ('172.17.240.168', 64972): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;"}
+[tung:8001] Parsed JSON from ('172.17.240.168', 64972): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;'}
+[tung:8001] Received friend list: tung:8001:online;
+[tung:8001] Connection closed from ('172.17.240.168', 64972)
+[tung:8001] Sent message: @bot
+[tung:8001] Bot responded: Bot error: 
+  No API_KEY or ADC found. Please either:
+    - Set the `GOOGLE_API_KEY` environment variable.
+    - Manually pass the key with `genai.configure(api_key=my_api_key)`.
+    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.
+[tung:8001] Created/Verified user folder: tung
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[tung:8001] New connection from ('172.17.240.168', 65045)
+[tung:8001] Connection stabilized for ('172.17.240.168', 65045)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 65045)
+[tung:8001] Raw data received from ('172.17.240.168', 65045): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;"}
+[tung:8001] Parsed JSON from ('172.17.240.168', 65045): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;'}
+[tung:8001] Received friend list: tung:8001:online;
+[tung:8001] Connection closed from ('172.17.240.168', 65045)
+[tung:8001] Created/Verified user folder: tung
+[tung:8001] Gemini API configured successfully
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[tung:8001] New connection from ('172.17.240.168', 65150)
+[tung:8001] Connection stabilized for ('172.17.240.168', 65150)
+[tung:8001] Starting recv_input_stream for ('172.17.240.168', 65150)
+[tung:8001] Raw data received from ('172.17.240.168', 65150): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;"}
+[tung:8001] Parsed JSON from ('172.17.240.168', 65150): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;'}
+[tung:8001] Received friend list: tung:8001:online;
+[tung:8001] Connection closed from ('172.17.240.168', 65150)
+[tung:8001] Sent message: @bot
+[tung:8001] Processing bot message: @bot
+[tung:8001] Bot response: Hello! How can I help you today?
+
+[tung:8001] Bot responded: Hello! How can I help you today?
+
+[tung:8001] Sent message: @bot hãy giúp tôi tỏ tình
+[tung:8001] Processing bot message: @bot hãy giúp tôi tỏ tình
+[tung:8001] Bot response: Tôi có thể giúp bạn, nhưng cần thêm thông tin để viết một lời tỏ tình hiệu quả. Hãy cho tôi biết:
+
+* **Bạn muốn tỏ tình với ai?** (Tên, tính cách, sở thích...)  Càng nhiều chi tiết càng tốt.
+* **Mối quan hệ của bạn với người đó hiện tại như thế nào?** (Bạn bè, người quen, đồng nghiệp...)
+* **Bạn muốn tỏ tình như thế nào?** (Trực tiếp, gián tiếp, qua thư, qua quà tặng...)
+* **Bạn muốn lời tỏ tình của mình như thế nào?** (Ngắn gọn, lãng mạn, hài hước, chân thành...)
+* **Có điều gì đặc biệt giữa bạn và người đó không?** (Kỉ niệm, sở thích chung...)
+
+Càng nhiều thông tin bạn cung cấp, tôi càng có thể giúp bạn viết một lời tỏ tình hoàn hảo và phù hợp với hoàn cảnh.  Hãy chia sẻ với tôi nhé!
+
+[tung:8001] Bot responded: Tôi có thể giúp bạn, nhưng cần thêm thông tin để viết một lời tỏ tình hiệu quả. Hãy cho tôi biết:
+
+* **Bạn muốn tỏ tình với ai?** (Tên, tính cách, sở thích...)  Càng nhiều chi tiết càng tốt.
+* **Mối quan hệ của bạn với người đó hiện tại như thế nào?** (Bạn bè, người quen, đồng nghiệp...)
+* **Bạn muốn tỏ tình như thế nào?** (Trực tiếp, gián tiếp, qua thư, qua quà tặng...)
+* **Bạn muốn lời tỏ tình của mình như thế nào?** (Ngắn gọn, lãng mạn, hài hước, chân thành...)
+* **Có điều gì đặc biệt giữa bạn và người đó không?** (Kỉ niệm, sở thích chung...)
+
+Càng nhiều thông tin bạn cung cấp, tôi càng có thể giúp bạn viết một lời tỏ tình hoàn hảo và phù hợp với hoàn cảnh.  Hãy chia sẻ với tôi nhé!
+
+[tung:8001] Peer shutting down.
+[tung:8001] Created/Verified user folder: tung
+[tung:8001] Gemini API configured successfully
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[tung:8001] New connection from ('172.17.235.120', 54180)
+[tung:8001] Connection stabilized for ('172.17.235.120', 54180)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54180)
+[tung:8001] Raw data received from ('172.17.235.120', 54180): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;"}
+[tung:8001] Parsed JSON from ('172.17.235.120', 54180): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;'}
+[tung:8001] Received friend list: tung:8001:online;
+[tung:8001] Connection closed from ('172.17.235.120', 54180)
+[hung:8002] Created/Verified user folder: hung
+[hung:8002] Peer registered with central server on port 8002
+[hung:8002] Peer started on port 8002
+[hung:8002] New connection from ('172.17.235.120', 54216)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54216)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54216)
+[hung:8002] Raw data received from ('172.17.235.120', 54216): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;"}
+[hung:8002] Parsed JSON from ('172.17.235.120', 54216): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;'}
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;
+[hung:8002] Connection closed from ('172.17.235.120', 54216)
+[thuy:8003] Created/Verified user folder: thuy
+[thuy:8003] Peer registered with central server on port 8003
+[thuy:8003] Peer started on port 8003
+[hung:8002] New connection from ('172.17.235.120', 54223)
+[thuy:8003] New connection from ('172.17.235.120', 54224)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54223)
+[thuy:8003] Connection stabilized for ('172.17.235.120', 54224)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54223)
+[thuy:8003] Starting recv_input_stream for ('172.17.235.120', 54224)
+[hung:8002] Raw data received from ('172.17.235.120', 54223): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:online;"}
+[thuy:8003] Raw data received from ('172.17.235.120', 54224): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:online;"}
+[hung:8002] Parsed JSON from ('172.17.235.120', 54223): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:online;'}
+[thuy:8003] Parsed JSON from ('172.17.235.120', 54224): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:online;'}
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:online;
+[thuy:8003] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:online;
+[hung:8002] Connection closed from ('172.17.235.120', 54223)
+[linh:8005] Created/Verified user folder: linh
+[linh:8005] Peer registered with central server on port 8005
+[linh:8005] Peer started on port 8005
+[hung:8002] New connection from ('172.17.235.120', 54230)
+[thuy:8003] New connection from ('172.17.235.120', 54231)
+[linh:8005] New connection from ('172.17.235.120', 54232)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54230)
+[thuy:8003] Connection stabilized for ('172.17.235.120', 54231)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54230)
+[linh:8005] Connection stabilized for ('172.17.235.120', 54232)
+[thuy:8003] Starting recv_input_stream for ('172.17.235.120', 54231)
+[linh:8005] Starting recv_input_stream for ('172.17.235.120', 54232)
+ "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;"}
+[thuy:8003] Raw data received from ('172.17.235.120', 54231): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;"}
+[linh:8005] Raw data received from ('172.17.235.120', 54232): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;"}
+[thuy:8003] Parsed JSON from ('172.17.235.120', 54231): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;'}
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;
+[linh:8005] Parsed JSON from ('172.17.235.120', 54232): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;'}
+[hung:8002] Connection closed from ('172.17.235.120', 54230)
+[linh:8005] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;
+[thuy:8003] Connection closed from ('172.17.235.120', 54231)
+[linh:8005] Connection closed from ('172.17.235.120', 54232)
+[khang:8006] Created/Verified user folder: khang
+[khang:8006] Peer registered with central server on port 8006
+[khang:8006] Peer started on port 8006
+[hung:8002] New connection from ('172.17.235.120', 54238)
+[thuy:8003] New connection from ('172.17.235.120', 54239)
+[khang:8006] New connection from ('172.17.235.120', 54241)
+[linh:8005] New connection from ('172.17.235.120', 54240)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54238)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54238)
+[thuy:8003] Connection stabilized for ('172.17.235.120', 54239)
+[linh:8005] Connection stabilized for ('172.17.235.120', 54240)
+
+[hung:8002] Raw data received from ('172.17.235.120', 54238): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;"}
+[khang:8006] Starting recv_input_stream for ('172.17.235.120', 54241)
+[thuy:8003] Starting recv_input_stream for ('172.17.235.120', 54239)
+[linh:8005] Starting recv_input_stream for ('172.17.235.120', 54240)
+[khang:8006] Raw data received from ('172.17.235.120', 54241): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;"}
+[hung:8002] Parsed JSON from ('172.17.235.120', 54238): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;'}
+[thuy:8003] Raw data received from ('172.17.235.120', 54239): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;"}
+[khang:8006] Parsed JSON from ('172.17.235.120', 54241): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;'}
+;"}
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;
+[thuy:8003] Parsed JSON from ('172.17.235.120', 54239): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;'}
+[khang:8006] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;
+[khang:8006] Connection closed from ('172.17.235.120', 54241)
+[hung:8002] Connection closed from ('172.17.235.120', 54238)
+[linh:8005] Parsed JSON from ('172.17.235.120', 54240): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;'}
+[thuy:8003] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;
+[linh:8005] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;
+[thuy:8003] Connection closed from ('172.17.235.120', 54239)
+[linh:8005] Connection closed from ('172.17.235.120', 54240)
+[vy:8007] Created/Verified user folder: vy
+[vy:8007] Peer registered with central server on port 8007
+[vy:8007] Peer started on port 8007
+[thuy:8003] New connection from ('172.17.235.120', 54250)
+[hung:8002] New connection from ('172.17.235.120', 54249)
+[linh:8005] New connection from ('172.17.235.120', 54251)
+[vy:8007] New connection from ('172.17.235.120', 54253)
+[khang:8006] New connection from ('172.17.235.120', 54252)
+[thuy:8003] Connection stabilized for ('172.17.235.120', 54250)
+[vy:8007] Connection stabilized for ('172.17.235.120', 54253)
+[thuy:8003] Starting recv_input_stream for ('172.17.235.120', 54250)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54249)
+[khang:8006] Connection stabilized for ('172.17.235.120', 54252)
+[thuy:8003] Raw data received from ('172.17.235.120', 54250): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;"}
+[hung:8002] Raw data received from ('172.17.235.120', 54249): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;"}
+[vy:8007] Starting recv_input_stream for ('172.17.235.120', 54253)
+[linh:8005] Starting recv_input_stream for ('172.17.235.120', 54251)
+[vy:8007] Raw data received from ('172.17.235.120', 54253): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;"}
+[thuy:8003] Parsed JSON from ('172.17.235.120', 54250): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;'}
+[hung:8002] Parsed JSON from ('172.17.235.120', 54249): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;'}
+[khang:8006] Starting recv_input_stream for ('172.17.235.120', 54252)
+[vy:8007] Parsed JSON from ('172.17.235.120', 54253): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;'}
+[linh:8005] Raw data received from ('172.17.235.120', 54251): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;"}
+[thuy:8003] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;
+[vy:8007] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;
+[khang:8006] Raw data received from ('172.17.235.120', 54252): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;"}
+[linh:8005] Parsed JSON from ('172.17.235.120', 54251): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;'}
+[vy:8007] Connection closed from ('172.17.235.120', 54253)
+[thuy:8003] Connection closed from ('172.17.235.120', 54250)
+[hung:8002] Connection closed from ('172.17.235.120', 54249)
+[khang:8006] Parsed JSON from ('172.17.235.120', 54252): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;'}
+[linh:8005] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;
+[khang:8006] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;
+[linh:8005] Connection closed from ('172.17.235.120', 54251)
+[khang:8006] Connection closed from ('172.17.235.120', 54252)
+[long:8008] Created/Verified user folder: long
+[long:8008] Peer registered with central server on port 8008
+[long:8008] Peer started on port 8008
+[thuy:8003] New connection from ('172.17.235.120', 54260)
+[linh:8005] New connection from ('172.17.235.120', 54261)
+[khang:8006] New connection from ('172.17.235.120', 54262)
+[vy:8007] New connection from ('172.17.235.120', 54263)
+[long:8008] New connection from ('172.17.235.120', 54264)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54259)
+[thuy:8003] Connection stabilized for ('172.17.235.120', 54260)
+[linh:8005] Connection stabilized for ('172.17.235.120', 54261)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54259)
+[khang:8006] Connection stabilized for ('172.17.235.120', 54262)
+[long:8008] Connection stabilized for ('172.17.235.120', 54264)
+[thuy:8003] Starting recv_input_stream for ('172.17.235.120', 5[hung:8002] Raw data received from ('172.17.235.120', 54259): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;"}
+[long:8008] Starting recv_input_stream for ('172.17.235.120', 54264)
+[linh:8005] Starting recv_input_stream for ('172.17.235.120', 54261)
+[khang:8006] Starting recv_input_stream for ('172.17.235.120', 54262)
+[long:8008] Raw data received from ('172.17.235.120', 54264): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;"}
+[hung:8002] Parsed JSON from ('172.17.235.120', 54259): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;'}
+[thuy:8003] Raw data received from ('172.17.235.120', 54260): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;"}
+[vy:8007] Starting recv_input_stream for ('172.17.235.120', 54263)
+[linh:8005] Raw data received from ('172.17.235.120', 54261): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;"}
+[long:8008] Parsed JSON from ('172.17.235.120', 54264): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;'}
+[khang:8006] Raw data received from ('172.17.235.120', 54262): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;"}
+[long:8008] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;
+[linh:8005] Parsed JSON from ('172.17.235.120', 54261): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;'}
+[vy:8007] Raw data received from ('172.17.235.120', 54263): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;"}
+[long:8008] Connection closed from ('172.17.235.120', 54264)
+[khang:8006] Parsed JSON from ('172.17.235.120', 54262): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;'}
+[thuy:8003] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;
+[vy:8007] Parsed JSON from ('172.17.235.120', 54263): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;'}
+[linh:8005] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;
+[khang:8006] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;
+[thuy:8003] Connection closed from ('172.17.235.120', 54260)
+[vy:8007] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:online;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;
+[khang:8006] Connection closed from ('172.17.235.120', 54262)
+[linh:8005] Connection closed from ('172.17.235.120', 54261)
+[vy:8007] Connection closed from ('172.17.235.120', 54263)
+[thuy:8003] Peer shutting down.
+[hung:8002] New connection from ('172.17.235.120', 54274)
+[khang:8006] New connection from ('172.17.235.120', 54276)
+[long:8008] New connection from ('172.17.235.120', 54278)
+[linh:8005] New connection from ('172.17.235.120', 54275)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54274)
+[khang:8006] Connection stabilized for ('172.17.235.120', 54276)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54274)
+[long:8008] Connection stabilized for ('172.17.235.120', 54278)
+[vy:8007] Connection stabilized for ('172.17.235.120', 54277)
+[khang:8006] Starting recv_input_stream for ('172.17.235.120', 54276)
+[linh:8005] Connection stabilized for ('172.17.235.120', 54275)
+ame": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;"}
+[khang:8006] Raw data received from ('172.17.235.120', 54276): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;"}
+[hung:8002] Parsed JSON from ('172.17.235.120', 54274): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;'}
+[vy:8007] Starting recv_input_stream for ('172.17.235.120', 54277)
+[linh:8005] Starting recv_input_stream for ('172.17.235.120', 54275)
+[khang:8006] Parsed JSON from ('172.17.235.120', 54276): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;'}
+[long:8008] Raw data received from ('172.17.235.120', 54278): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;"}
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;
+[vy:8007] Raw data received from ('172.17.235.120', 54277): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;"}
+[linh:8005] Raw data received from ('172.17.235.120', 54275): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;"}
+[khang:8006] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;
+[long:8008] Parsed JSON from ('172.17.235.120', 54278): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;'}
+[hung:8002] Connection closed from ('172.17.235.120', 54274)
+[vy:8007] Parsed JSON from ('172.17.235.120', 54277): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;'}
+[linh:8005] Parsed JSON from ('172.17.235.120', 54275): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;'}
+[khang:8006] Connection closed from ('172.17.235.120', 54276)
+[long:8008] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;
+[linh:8005] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;
+[vy:8007] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:online;vy:8007:online;long:8008:online;
+[linh:8005] Connection closed from ('172.17.235.120', 54275)
+[vy:8007] Connection closed from ('172.17.235.120', 54277)
+[khang:8006] Peer shutting down.
+[hung:8002] New connection from ('172.17.235.120', 54282)
+[linh:8005] New connection from ('172.17.235.120', 54283)
+[vy:8007] New connection from ('172.17.235.120', 54284)
+[long:8008] New connection from ('172.17.235.120', 54285)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54282)
+[linh:8005] Connection stabilized for ('172.17.235.120', 54283)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54282)
+[long:8008] Connection stabilized for ('172.17.235.120', 54285)
+[hung:8002] Raw data received from ('172.17.235.120', 54282): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;"}
+[long:8008] Starting recv_input_stream for ('172.17.235.120', 54285)
+[linh:8005] Raw data received from ('172.17.235.120', 54283): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;"}
+[vy:8007] Starting recv_input_stream for ('172.17.235.120', 54284)
+MUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;'}
+[long:8008] Raw data received from ('172.17.235.120', 54285): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;"}
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;
+[linh:8005] Parsed JSON from ('172.17.235.120', 54283): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;'}
+[vy:8007] Raw data received from ('172.17.235.120', 54284): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;"}
+[long:8008] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;
+[linh:8005] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;
+[hung:8002] Connection closed from ('172.17.235.120', 54282)
+[vy:8007] Parsed JSON from ('172.17.235.120', 54284): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;'}
+[linh:8005] Connection closed from ('172.17.235.120', 54283)
+[vy:8007] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;
+[vy:8007] Connection closed from ('172.17.235.120', 54284)
+[tung:8001] Created/Verified user folder: tung
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[hung:8002] New connection from ('172.17.235.120', 54299)
+[tung:8001] New connection from ('172.17.235.120', 54298)
+[vy:8007] New connection from ('172.17.235.120', 54301)
+
+[long:8008] New connection from ('172.17.235.120', 54302)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54299)
+[tung:8001] Connection stabilized for ('172.17.235.120', 54298)
+[long:8008] Connection stabilized for ('172.17.235.120', 54302)
+[vy:8007] Connection stabilized for ('172.17.235.120', 54301)
+
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54299)
+[long:8008] Starting recv_input_stream for ('172.17.235.120', 54302)
+[tung:8001] Raw data received from ('172.17.235.120', 54298): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;"}
+[hung:8002] Raw data received from ('172.17.235.120', 54299): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;"}
+[tung:8001] Parsed JSON from ('172.17.235.120', 54298): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;'}
+[long:8008] Raw data received from ('172.17.235.120', 54302): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;"}
+[hung:8002] Parsed JSON from ('172.17.235.120', 54299): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;'}
+[linh:8005] Starting recv_input_stream for ('172.17.235.120', 54300)
+[tung:8001] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;
+[tung:8001] Connection closed from ('172.17.235.120', 54298)
+[long:8008] Parsed JSON from ('172.17.235.120', 54302): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;'}
+[vy:8007] Raw data received from ('172.17.235.120', 54301): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;"}
+[linh:8005] Raw data received from ('172.17.235.120', 54300): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;"}
+[hung:8002] Connection closed from ('172.17.235.120', 54299)
+[vy:8007] Parsed JSON from ('172.17.235.120', 54301): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;'}
+[long:8008] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;
+[linh:8005] Parsed JSON from ('172.17.235.120', 54300): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;'}
+[vy:8007] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;
+[long:8008] Connection closed from ('172.17.235.120', 54302)
+[linh:8005] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:online;long:8008:online;
+[vy:8007] Connection closed from ('172.17.235.120', 54301)
+[linh:8005] Connection closed from ('172.17.235.120', 54300)
+[vy:8007] Peer shutting down.
+[tung:8001] New connection from ('172.17.235.120', 54305)
+[hung:8002] New connection from ('172.17.235.120', 54306)
+[linh:8005] New connection from ('172.17.235.120', 54307)
+[long:8008] New connection from ('172.17.235.120', 54308)
+[tung:8001] Connection stabilized for ('172.17.235.120', 54305)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54306)
+05)
+[linh:8005] Connection stabilized for ('172.17.235.120', 54307)
+[long:8008] Connection stabilized for ('172.17.235.120', 54308)
+[tung:8001] Raw data received from ('172.17.235.120', 54305): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54306)
+[long:8008] Starting recv_input_stream for ('172.17.235.120', 54308)
+[tung:8001] Parsed JSON from ('172.17.235.120', 54305): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[linh:8005] Starting recv_input_stream for ('172.17.235.120', 54307)
+[hung:8002] Raw data received from ('172.17.235.120', 54306): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[tung:8001] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[linh:8005] Raw data received from ('172.17.235.120', 54307): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[long:8008] Raw data received from ('172.17.235.120', 54308): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[tung:8001] Connection closed from ('172.17.235.120', 54305)
+[linh:8005] Parsed JSON from ('172.17.235.120', 54307): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[hung:8002] Parsed JSON from ('172.17.235.120', 54306): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[long:8008] Parsed JSON from ('172.17.235.120', 54308): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[linh:8005] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[long:8008] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[linh:8005] Connection closed from ('172.17.235.120', 54307)
+[long:8008] Connection closed from ('172.17.235.120', 54308)
+[hung:8002] Connection closed from ('172.17.235.120', 54306)
+[hung:8002] Connected to peer at port 8001
+[hung:8002] Sent connect request to port 8001: {"type": "connect", "name": "hung"}
+
+[tung:8001] New connection from ('172.17.235.120', 54316)
+[hung:8002] Sent fetch request to port 8001: {"type": "fetch", "name": "hung"}
+
+[tung:8001] Connection stabilized for ('172.17.235.120', 54316)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54316)
+[tung:8001] Raw data received from ('172.17.235.120', 54316): {"type": "connect", "name": "hung"}
+{"type": "fetch", "name": "hung"}
+
+[tung:8001] Parsed JSON from ('172.17.235.120', 54316): {'type': 'connect', 'name': 'hung'}
+[tung:8001] Peer hung requested connection
+[tung:8001] Parsed JSON from ('172.17.235.120', 54316): {'type': 'fetch', 'name': 'hung'}
+[tung:8001] Connected to peer at port 8002
+[hung:8002] New connection from ('172.17.235.120', 54317)
+[tung:8001] Sent connect request to port 8002: {"type": "connect", "name": "tung"}
+
+[tung:8001] Sent fetch request to port 8002: {"type": "fetch", "name": "tung"}
+
+[hung:8002] Connection stabilized for ('172.17.235.120', 54317)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54317)
+[hung:8002] Raw data received from ('172.17.235.120', 54317): {"type": "connect", "name": "tung"}
+{"type": "fetch", "name": "tung"}
+
+[hung:8002] Parsed JSON from ('172.17.235.120', 54317): {'type': 'connect', 'name': 'tung'}
+[hung:8002] Peer tung requested connection
+[hung:8002] Parsed JSON from ('172.17.235.120', 54317): {'type': 'fetch', 'name': 'tung'}
+[tung:8001] Sent message: hi
+[hung:8002] Raw data received from ('172.17.235.120', 54317): {"name": "tung", "type": "chat", "message": "hi"}
+
+[hung:8002] Parsed JSON from ('172.17.235.120', 54317): {'name': 'tung', 'type': 'chat', 'message': 'hi'}
+[hung:8002] Received chat from tung: hi
+[hung:8002] Sent message: hello
+[tung:8001] Raw data received from ('172.17.235.120', 54316): {"name": "hung", "type": "chat", "message": "hello"}
+
+[tung:8001] Parsed JSON from ('172.17.235.120', 54316): {'name': 'hung', 'type': 'chat', 'message': 'hello'}
+[tung:8001] Received chat from hung: hello
+[tung:8001] Sent message: @bot
+[tung:8001] Processing bot message: @bot
+[hung:8002] Raw data received from ('172.17.235.120', 54317): {"name": "tung", "type": "chat", "message": "@bot"}
+
+[hung:8002] Parsed JSON from ('172.17.235.120', 54317): {'name': 'tung', 'type': 'chat', 'message': '@bot'}
+[hung:8002] Received chat from tung: @bot
+[tung:8001] Bot response: How can I help you?
+
+[tung:8001] Bot responded: How can I help you?
+
+[tung:8001] Peer shutting down.
+[hung:8002] Connection closed from ('172.17.235.120', 54317)
+[hung:8002] New connection from ('172.17.235.120', 54331)
+[linh:8005] New connection from ('172.17.235.120', 54332)
+[long:8008] New connection from ('172.17.235.120', 54333)
+[linh:8005] Connection stabilized for ('172.17.235.120', 54332)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54331)
+[linh:8005] Starting recv_input_stream for ('172.17.235.120', 54332)
+[long:8008] Connection stabilized for ('172.17.235.120', 54333)
+[hung:8002] Raw data received from ('172.17.235.120', 54331): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:offline;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[linh:8005] Raw data received from ('172.17.235.120', 54332): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:offline;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[hung:8002] Parsed JSON from ('172.17.235.120', 54331): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:offline;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[long:8008] Starting recv_input_stream for ('172.17.235.120', 54333)
+[linh:8005] Parsed JSON from ('172.17.235.120', 54332): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:offline;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[hung:8002] Received friend list: tung:8001:offline;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[long:8008] Raw data received from ('172.17.235.120', 54333): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:offline;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[linh:8005] Received friend list: tung:8001:offline;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[hung:8002] Connection closed from ('172.17.235.120', 54331)
+[long:8008] Parsed JSON from ('172.17.235.120', 54333): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:offline;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[linh:8005] Connection closed from ('172.17.235.120', 54332)
+[long:8008] Received friend list: tung:8001:offline;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[long:8008] Connection closed from ('172.17.235.120', 54333)
+[tung:8001] Created/Verified user folder: tung
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[linh:8005] New connection from ('172.17.235.120', 54342)
+[tung:8001] New connection from ('172.17.235.120', 54340)
+[long:8008] New connection from ('172.17.235.120', 54343)
+[hung:8002] New connection from ('172.17.235.120', 54341)
+[linh:8005] Connection stabilized for ('172.17.235.120', 54342)
+[tung:8001] Connection stabilized for ('172.17.235.120', 54340)
+[long:8008] Connection stabilized for ('172.17.235.120', 54343)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54341)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54340)
+[linh:8005] Starting recv_input_stream for ('172.17.235.120', 54342)
+[tung:8001] Raw data received from ('172.17.235.120', 54340): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[long:8008] Starting recv_input_stream for ('172.17.235.120', 54343)
+[tung:8001] Parsed JSON from ('172.17.235.120', 54340): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[linh:8005] Raw data received from ('172.17.235.120', 54342): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54341)
+[tung:8001] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[linh:8005] Parsed JSON from ('172.17.235.120', 54342): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+e;"}
+[hung:8002] Raw data received from ('172.17.235.120', 54341): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[tung:8001] Connection closed from ('172.17.235.120', 54340)
+[linh:8005] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[hung:8002] Parsed JSON from ('172.17.235.120', 54341): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[linh:8005] Connection closed from ('172.17.235.120', 54342)
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[long:8008] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[hung:8002] Connection closed from ('172.17.235.120', 54341)
+[long:8008] Connection closed from ('172.17.235.120', 54343)
+[tung:8001] Sent message: @bot có thể giúp tôi được không
+[tung:8001] Processing bot message: @bot có thể giúp tôi được không
+[tung:8001] Bot response: Tôi có thể cố gắng giúp bạn! Hãy cho tôi biết bạn cần gì.  Để tôi có thể giúp bạn tốt hơn, vui lòng cho tôi biết rõ ràng vấn đề hoặc câu hỏi của bạn.
+
+[tung:8001] Bot responded: Tôi có thể cố gắng giúp bạn! Hãy cho tôi biết bạn cần gì.  Để tôi có thể giúp bạn tốt hơn, vui lòng cho tôi biết rõ ràng vấn đề hoặc câu hỏi của bạn.
+
+[tung:8001] Peer shutting down.
+[long:8008] New connection from ('172.17.235.120', 54355)
+[linh:8005] New connection from ('172.17.235.120', 54354)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54353)
+[long:8008] Connection stabilized for ('172.17.235.120', 54355)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54353)
+[linh:8005] Connection stabilized for ('172.17.235.120', 54354)
+[long:8008] Starting recv_input_stream for ('172.17.235.120', 54355)
+[hung:8002] Raw data received from ('172.17.235.120', 54353): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:offline;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[long:8008] Raw data received from ('172.17.235.120', 54355): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:offline;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[linh:8005] Starting recv_input_stream for ('172.17.235.120', 54354)
+[hung:8002] Parsed JSON from ('172.17.235.120', 54353): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:offline;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[hung:8002] Received friend list: tung:8001:offline;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[long:8008] Parsed JSON from ('172.17.235.120', 54355): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:offline;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[linh:8005] Raw data received from ('172.17.235.120', 54354): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:offline;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[hung:8002] Connection closed from ('172.17.235.120', 54353)
+[long:8008] Received friend list: tung:8001:offline;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[linh:8005] Parsed JSON from ('172.17.235.120', 54354): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:offline;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[long:8008] Connection closed from ('172.17.235.120', 54355)
+[linh:8005] Received friend list: tung:8001:offline;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[linh:8005] Connection closed from ('172.17.235.120', 54354)
+[tung:8001] Created/Verified user folder: tung
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[tung:8001] New connection from ('172.17.235.120', 54360)
+[hung:8002] New connection from ('172.17.235.120', 54361)
+[long:8008] New connection from ('172.17.235.120', 54363)
+[linh:8005] New connection from ('172.17.235.120', 54362)
+[tung:8001] Connection stabilized for ('172.17.235.120', 54360)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54361)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54360)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54361)
+[tung:8001] Raw data received from ('172.17.235.120', 54360): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[long:8008] Connection stabilized for ('172.17.235.120', 54363)
+[linh:8005] Connection stabilized for ('172.17.235.120', 54362)
+[tung:8001] Parsed JSON from ('172.17.235.120', 54360): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[hung:8002] Raw data received from ('172.17.235.120', 54361): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[long:8008] Starting recv_input_stream for ('172.17.235.120', 54363)
+[tung:8001] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[hung:8002] Parsed JSON from ('172.17.235.120', 54361): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[linh:8005] Starting recv_input_stream for ('172.17.235.120', 54362)
+[tung:8001] Connection closed from ('172.17.235.120', 54360)
+[long:8008] Raw data received from ('172.17.235.120', 54363): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[linh:8005] Raw data received from ('172.17.235.120', 54362): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[long:8008] Parsed JSON from ('172.17.235.120', 54363): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[hung:8002] Connection closed from ('172.17.235.120', 54361)
+[long:8008] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+ne;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[long:8008] Connection closed from ('172.17.235.120', 54363)
+[linh:8005] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[linh:8005] Connection closed from ('172.17.235.120', 54362)
+[hung:8002] Peer shutting down.
+[tung:8001] New connection from ('172.17.235.120', 54527)
+[linh:8005] New connection from ('172.17.235.120', 54528)
+[long:8008] New connection from ('172.17.235.120', 54529)
+[tung:8001] Connection stabilized for ('172.17.235.120', 54527)
+[linh:8005] Connection stabilized for ('172.17.235.120', 54528)
+[long:8008] Connection stabilized for ('172.17.235.120', 54529)
+[linh:8005] Starting recv_input_stream for ('172.17.235.120', 54528)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54527)
+[long:8008] Starting recv_input_stream for ('172.17.235.120', 54529)
+[linh:8005] Raw data received from ('172.17.235.120', 54528): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:offline;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[tung:8001] Raw data received from ('172.17.235.120', 54527): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:offline;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[long:8008] Raw data received from ('172.17.235.120', 54529): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:offline;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[linh:8005] Parsed JSON from ('172.17.235.120', 54528): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:offline;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[tung:8001] Parsed JSON from ('172.17.235.120', 54527): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:offline;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[linh:8005] Received friend list: tung:8001:online;hung:8002:offline;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[long:8008] Parsed JSON from ('172.17.235.120', 54529): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:offline;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[tung:8001] Received friend list: tung:8001:online;hung:8002:offline;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[long:8008] Received friend list: tung:8001:online;hung:8002:offline;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[linh:8005] Connection closed from ('172.17.235.120', 54528)
+[tung:8001] Connection closed from ('172.17.235.120', 54527)
+[long:8008] Connection closed from ('172.17.235.120', 54529)
+[hung:8002] Created/Verified user folder: hung
+[hung:8002] Gemini API configured successfully
+[hung:8002] Peer registered with central server on port 8002
+[hung:8002] Peer started on port 8002
+[hung:8002] New connection from ('172.17.235.120', 54535)
+[tung:8001] New connection from ('172.17.235.120', 54534)
+[linh:8005] New connection from ('172.17.235.120', 54536)
+[long:8008] New connection from ('172.17.235.120', 54537)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54535)
+[tung:8001] Connection stabilized for ('172.17.235.120', 54534)
+[linh:8005] Connection stabilized for ('172.17.235.120', 54536)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54535)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54534)
+[long:8008] Connection stabilized for ('172.17.235.120', 54537)
+[hung:8002] Raw data received from ('172.17.235.120', 54535): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[tung:8001] Raw data received from ('172.17.235.120', 54534): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[long:8008] Starting recv_input_stream for ('172.17.235.120', 54537)
+[hung:8002] Parsed JSON from ('172.17.235.120', 54535): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[linh:8005] Starting recv_input_stream for ('172.17.235.120', 54536)
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[tung:8001] Parsed JSON from ('172.17.235.120', 54534): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[long:8008] Raw data received from ('172.17.235.120', 54537): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[linh:8005] Raw data received from ('172.17.235.120', 54536): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[hung:8002] Connection closed from ('172.17.235.120', 54535)
+[tung:8001] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[long:8008] Parsed JSON from ('172.17.235.120', 54537): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[linh:8005] Parsed JSON from ('172.17.235.120', 54536): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[tung:8001] Connection closed from ('172.17.235.120', 54534)
+[long:8008] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[linh:8005] Received friend list: tung:8001:online;hung:8002:online;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[long:8008] Connection closed from ('172.17.235.120', 54537)
+[linh:8005] Connection closed from ('172.17.235.120', 54536)
+[hung:8002] Peer shutting down.
+[linh:8005] New connection from ('172.17.235.120', 54541)
+[long:8008] New connection from ('172.17.235.120', 54542)
+[linh:8005] Connection stabilized for ('172.17.235.120', 54541)
+[tung:8001] Connection stabilized for ('172.17.235.120', 54540)
+[long:8008] Connection stabilized for ('172.17.235.120', 54542)
+[linh:8005] Starting recv_input_stream for ('172.17.235.120', 54541)
+[long:8008] Starting recv_input_stream for ('172.17.235.120', 54542)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54540)
+[linh:8005] Raw data received from ('172.17.235.120', 54541): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:offline;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[long:8008] Raw data received from ('172.17.235.120', 54542): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:offline;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[tung:8001] Raw data received from ('172.17.235.120', 54540): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:offline;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;"}
+[long:8008] Parsed JSON from ('172.17.235.120', 54542): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:offline;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[linh:8005] Parsed JSON from ('172.17.235.120', 54541): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:offline;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;'}
+[long:8008] Received friend list: tung:8001:online;hung:8002:offline;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[tung:8001] Received friend list: tung:8001:online;hung:8002:offline;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[linh:8005] Received friend list: tung:8001:online;hung:8002:offline;thuy:8003:offline;linh:8005:online;khang:8006:offline;vy:8007:offline;long:8008:online;
+[long:8008] Connection closed from ('172.17.235.120', 54542)
+[tung:8001] Connection closed from ('172.17.235.120', 54540)
+[linh:8005] Connection closed from ('172.17.235.120', 54541)
+[tung:8001] Created/Verified user folder: tung
+[tung:8001] Gemini API configured successfully
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[tung:8001] New connection from ('172.17.235.120', 54558)
+[tung:8001] Connection stabilized for ('172.17.235.120', 54558)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54558)
+[tung:8001] Raw data received from ('172.17.235.120', 54558): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;"}
+[tung:8001] Parsed JSON from ('172.17.235.120', 54558): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;'}
+[tung:8001] Received friend list: tung:8001:online;
+[tung:8001] Connection closed from ('172.17.235.120', 54558)
+[hung:8002] Created/Verified user folder: hung
+[hung:8002] Gemini API configured successfully
+[hung:8002] Peer registered with central server on port 8002
+[hung:8002] Peer started on port 8002
+[tung:8001] New connection from ('172.17.235.120', 54564)
+[hung:8002] New connection from ('172.17.235.120', 54565)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54565)
+[tung:8001] Connection stabilized for ('172.17.235.120', 54564)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54565)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54564)
+[hung:8002] Raw data received from ('172.17.235.120', 54565): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;"}
+[tung:8001] Raw data received from ('172.17.235.120', 54564): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;"}
+[hung:8002] Parsed JSON from ('172.17.235.120', 54565): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;'}
+[tung:8001] Parsed JSON from ('172.17.235.120', 54564): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;'}
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;
+[hung:8002] Connection closed from ('172.17.235.120', 54565)
+[tung:8001] Received friend list: tung:8001:online;hung:8002:online;
+[tung:8001] Connection closed from ('172.17.235.120', 54564)
+[hung:8002] Connected to peer at port 8001
+[hung:8002] Sent connect request to port 8001: {"type": "connect", "name": "hung"}
+
+[tung:8001] New connection from ('172.17.235.120', 54566)
+[hung:8002] Sent fetch request to port 8001: {"type": "fetch", "name": "hung"}
+
+[tung:8001] Connection stabilized for ('172.17.235.120', 54566)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54566)
+[tung:8001] Raw data received from ('172.17.235.120', 54566): {"type": "connect", "name": "hung"}
+{"type": "fetch", "name": "hung"}
+
+[tung:8001] Parsed JSON from ('172.17.235.120', 54566): {'type': 'connect', 'name': 'hung'}
+[tung:8001] Peer hung requested connection
+[tung:8001] Parsed JSON from ('172.17.235.120', 54566): {'type': 'fetch', 'name': 'hung'}
+[tung:8001] Sent message: @bot
+[tung:8001] Processing bot message: @bot
+[tung:8001] Bot response: How can I help you?
+
+[tung:8001] Bot responded: How can I help you?
+
+[tung:8001] Created/Verified user folder: tung
+[tung:8001] Gemini API configured successfully
+[tung:8001] Attempt 1/3 to connect to central server failed: [WinError 10061] No connection could be made because the target machine actively refused it
+[tung:8001] Peer shutting down.
+[tung:8001] Attempt 2/3 to connect to central server failed: [WinError 10061] No connection could be made because the target machine actively refused it
+[tung:8001] Created/Verified user folder: tung
+[tung:8001] Gemini API configured successfully
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[tung:8001] New connection from ('172.17.235.120', 54736)
+[tung:8001] Connection stabilized for ('172.17.235.120', 54736)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54736)
+[tung:8001] Raw data received from ('172.17.235.120', 54736): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;"}
+[tung:8001] Parsed JSON from ('172.17.235.120', 54736): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;'}
+[tung:8001] Received friend list: tung:8001:online;
+[tung:8001] Connection closed from ('172.17.235.120', 54736)
+[tung:8001] Sent message: @bot
+[tung:8001] Processing bot message: @bot
+[tung:8001] Bot response: How can I help you today?
+
+[tung:8001] Bot responded: How can I help you today?
+
+[hung:8002] Created/Verified user folder: hung
+[hung:8002] Gemini API configured successfully
+[hung:8002] Peer registered with central server on port 8002
+[hung:8002] Peer started on port 8002
+[tung:8001] New connection from ('172.17.235.120', 54747)
+[hung:8002] New connection from ('172.17.235.120', 54748)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54748)
+[tung:8001] Connection stabilized for ('172.17.235.120', 54747)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54748)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54747)
+[hung:8002] Raw data received from ('172.17.235.120', 54748): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;"}
+[hung:8002] Parsed JSON from ('172.17.235.120', 54748): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;'}
+[tung:8001] Raw data received from ('172.17.235.120', 54747): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;"}
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;
+[tung:8001] Parsed JSON from ('172.17.235.120', 54747): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;'}
+[hung:8002] Connection closed from ('172.17.235.120', 54748)
+[tung:8001] Received friend list: tung:8001:online;hung:8002:online;
+[tung:8001] Connection closed from ('172.17.235.120', 54747)
+[hung:8002] Connected to peer at port 8001
+[hung:8002] Sent connect request to port 8001: {"type": "connect", "name": "hung"}
+
+[tung:8001] New connection from ('172.17.235.120', 54749)
+[hung:8002] Sent fetch request to port 8001: {"type": "fetch", "name": "hung"}
+
+[tung:8001] Connection stabilized for ('172.17.235.120', 54749)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54749)
+[tung:8001] Raw data received from ('172.17.235.120', 54749): {"type": "connect", "name": "hung"}
+{"type": "fetch", "name": "hung"}
+
+[tung:8001] Parsed JSON from ('172.17.235.120', 54749): {'type': 'connect', 'name': 'hung'}
+[tung:8001] Peer hung requested connection
+[tung:8001] Parsed JSON from ('172.17.235.120', 54749): {'type': 'fetch', 'name': 'hung'}
+[tung:8001] Responded to fetch request from hung
+[tung:8001] Peer shutting down.
+[hung:8002] New connection from ('172.17.235.120', 54820)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54820)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54820)
+[hung:8002] Raw data received from ('172.17.235.120', 54820): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:offline;hung:8002:online;"}
+[hung:8002] Parsed JSON from ('172.17.235.120', 54820): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:offline;hung:8002:online;'}
+[hung:8002] Received friend list: tung:8001:offline;hung:8002:online;
+[hung:8002] Connection closed from ('172.17.235.120', 54820)
+[hung:8002] Peer shutting down.
+[tung:8001] Created/Verified user folder: tung
+[tung:8001] Gemini API configured successfully
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[tung:8001] New connection from ('172.17.235.120', 54837)
+[tung:8001] Connection stabilized for ('172.17.235.120', 54837)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54837)
+[tung:8001] Raw data received from ('172.17.235.120', 54837): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;"}
+[tung:8001] Parsed JSON from ('172.17.235.120', 54837): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;'}
+[tung:8001] Received friend list: tung:8001:online;
+[tung:8001] Connection closed from ('172.17.235.120', 54837)
+[hung:8002] Created/Verified user folder: hung
+[hung:8002] Gemini API configured successfully
+[hung:8002] Peer registered with central server on port 8002
+[hung:8002] Peer started on port 8002
+[tung:8001] New connection from ('172.17.235.120', 54842)
+[hung:8002] New connection from ('172.17.235.120', 54843)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54843)
+[tung:8001] Connection stabilized for ('172.17.235.120', 54842)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54843)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54842)
+[hung:8002] Raw data received from ('172.17.235.120', 54843): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;"}
+[tung:8001] Raw data received from ('172.17.235.120', 54842): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;"}
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;
+[tung:8001] Parsed JSON from ('172.17.235.120', 54842): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;'}
+[hung:8002] Connection closed from ('172.17.235.120', 54843)
+[tung:8001] Received friend list: tung:8001:online;hung:8002:online;
+[tung:8001] Connection closed from ('172.17.235.120', 54842)
+[vy:8003] Created/Verified user folder: vy
+[vy:8003] Gemini API configured successfully
+[vy:8003] Peer registered with central server on port 8003
+[vy:8003] Peer started on port 8003
+[tung:8001] New connection from ('172.17.235.120', 54850)
+[vy:8003] New connection from ('172.17.235.120', 54852)
+[hung:8002] New connection from ('172.17.235.120', 54851)
+[vy:8003] Connection stabilized for ('172.17.235.120', 54852)
+[tung:8001] Connection stabilized for ('172.17.235.120', 54850)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54851)
+[vy:8003] Starting recv_input_stream for ('172.17.235.120', 54852)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54850)
+[vy:8003] Raw data received from ('172.17.235.120', 54852): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;vy:8003:online;"}
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54851)
+[vy:8003] Parsed JSON from ('172.17.235.120', 54852): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:online;'}
+[tung:8001] Raw data received from ('172.17.235.120', 54850): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;vy:8003:online;"}
+[vy:8003] Received friend list: tung:8001:online;hung:8002:online;vy:8003:online;
+[tung:8001] Parsed JSON from ('172.17.235.120', 54850): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:online;'}
+[hung:8002] Raw data received from ('172.17.235.120', 54851): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;vy:8003:online;"}
+[vy:8003] Connection closed from ('172.17.235.120', 54852)
+[tung:8001] Received friend list: tung:8001:online;hung:8002:online;vy:8003:online;
+[hung:8002] Parsed JSON from ('172.17.235.120', 54851): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:online;'}
+[tung:8001] Connection closed from ('172.17.235.120', 54850)
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;vy:8003:online;
+[hung:8002] Connection closed from ('172.17.235.120', 54851)
+[vy:8003] Peer shutting down.
+[tung:8001] New connection from ('172.17.235.120', 54855)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54856)
+[tung:8001] Connection stabilized for ('172.17.235.120', 54855)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54855)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54856)
+[tung:8001] Raw data received from ('172.17.235.120', 54855): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;vy:8003:offline;"}
+[hung:8002] Raw data received from ('172.17.235.120', 54856): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;vy:8003:offline;"}
+[tung:8001] Parsed JSON from ('172.17.235.120', 54855): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:offline;'}
+[hung:8002] Parsed JSON from ('172.17.235.120', 54856): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:offline;'}
+[tung:8001] Received friend list: tung:8001:online;hung:8002:online;vy:8003:offline;
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;vy:8003:offline;
+[tung:8001] Connection closed from ('172.17.235.120', 54855)
+[hung:8002] Connection closed from ('172.17.235.120', 54856)
+[linh:8004] Created/Verified user folder: linh
+[linh:8004] Gemini API configured successfully
+[linh:8004] Peer registered with central server on port 8004
+[linh:8004] Peer started on port 8004
+[tung:8001] New connection from ('172.17.235.120', 54860)
+[linh:8004] New connection from ('172.17.235.120', 54862)
+[hung:8002] New connection from ('172.17.235.120', 54861)
+[tung:8001] Connection stabilized for ('172.17.235.120', 54860)
+[linh:8004] Connection stabilized for ('172.17.235.120', 54862)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54861)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54860)
+[linh:8004] Starting recv_input_stream for ('172.17.235.120', 54862)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54861)
+[tung:8001] Raw data received from ('172.17.235.120', 54860): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:online;"}
+[linh:8004] Raw data received from ('172.17.235.120', 54862): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:online;"}
+[tung:8001] Parsed JSON from ('172.17.235.120', 54860): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:online;'}
+[hung:8002] Raw data received from ('172.17.235.120', 54861): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:online;"}
+[linh:8004] Parsed JSON from ('172.17.235.120', 54862): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:online;'}
+[linh:8004] Received friend list: tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:online;
+[hung:8002] Parsed JSON from ('172.17.235.120', 54861): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:online;'}
+[linh:8004] Connection closed from ('172.17.235.120', 54862)
+[tung:8001] Connection closed from ('172.17.235.120', 54860)
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:online;
+[hung:8002] Connection closed from ('172.17.235.120', 54861)
+[linh:8004] Peer shutting down.
+[tung:8001] New connection from ('172.17.235.120', 54865)
+[hung:8002] New connection from ('172.17.235.120', 54866)
+[tung:8001] Connection stabilized for ('172.17.235.120', 54865)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54866)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54865)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54866)
+ "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;"}
+[tung:8001] Parsed JSON from ('172.17.235.120', 54865): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;'}
+[hung:8002] Raw data received from ('172.17.235.120', 54866): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;"}
+[tung:8001] Received friend list: tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;
+[tung:8001] Connection closed from ('172.17.235.120', 54865)
+[hung:8002] Parsed JSON from ('172.17.235.120', 54866): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;'}
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;
+[hung:8002] Connection closed from ('172.17.235.120', 54866)
+[thuy:8004] Created/Verified user folder: thuy
+[thuy:8004] Gemini API configured successfully
+[thuy:8004] Peer registered with central server on port 8004
+[thuy:8004] Peer started on port 8004
+[tung:8001] New connection from ('172.17.235.120', 54870)
+[hung:8002] New connection from ('172.17.235.120', 54871)
+[thuy:8004] New connection from ('172.17.235.120', 54872)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54871)
+[thuy:8004] Connection stabilized for ('172.17.235.120', 54872)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54871)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54870)
+[hung:8002] Raw data received from ('172.17.235.120', 54871): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;"}
+[tung:8001] Raw data received from ('172.17.235.120', 54870): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;"}
+[thuy:8004] Parsed JSON from ('172.17.235.120', 54872): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;'}
+[hung:8002] Parsed JSON from ('172.17.235.120', 54871): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;'}
+[thuy:8004] Received friend list: tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;
+[tung:8001] Parsed JSON from ('172.17.235.120', 54870): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;'}
+[thuy:8004] Connection closed from ('172.17.235.120', 54872)
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;
+[tung:8001] Received friend list: tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;
+[hung:8002] Connection closed from ('172.17.235.120', 54871)
+[tung:8001] Connection closed from ('172.17.235.120', 54870)
+[khang:8006] Created/Verified user folder: khang
+[khang:8006] Gemini API configured successfully
+[khang:8006] Peer registered with central server on port 8006
+[khang:8006] Peer started on port 8006
+[tung:8001] New connection from ('172.17.235.120', 54877)
+[khang:8006] New connection from ('172.17.235.120', 54880)
+[thuy:8004] New connection from ('172.17.235.120', 54879)
+[hung:8002] New connection from ('172.17.235.120', 54878)
+[tung:8001] Connection stabilized for ('172.17.235.120', 54877)
+[khang:8006] Connection stabilized for ('172.17.235.120', 54880)
+[thuy:8004] Connection stabilized for ('172.17.235.120', 54879)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54877)
+[khang:8006] Starting recv_input_stream for ('172.17.235.120', 54880)
+[khang:8006] Raw data received from ('172.17.235.120', 54880): {"name"[tung:8001] Raw data received from ('172.17.235.120', 54877): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:online;"}
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54878)
+[thuy:8004] Raw data received from ('172.17.235.120', 54879): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:online;"}
+[khang:8006] Parsed JSON from ('172.17.235.120', 54880): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:online;'}
+[tung:8001] Parsed JSON from ('172.17.235.120', 54877): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:online;'}
+[khang:8006] Received friend list: tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:online;
+[thuy:8004] Parsed JSON from ('172.17.235.120', 54879): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:online;'}
+[hung:8002] Raw data received from ('172.17.235.120', 54878): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:online;"}
+[thuy:8004] Received friend list: tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:online;
+[tung:8001] Received friend list: tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:online;
+[hung:8002] Parsed JSON from ('172.17.235.120', 54878): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:online;'}
+[thuy:8004] Connection closed from ('172.17.235.120', 54879)
+[tung:8001] Connection closed from ('172.17.235.120', 54877)
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:online;
+[hung:8002] Connection closed from ('172.17.235.120', 54878)
+[khang:8006] Peer shutting down.
+[tung:8001] New connection from ('172.17.235.120', 54882)
+[hung:8002] New connection from ('172.17.235.120', 54883)
+[thuy:8004] New connection from ('172.17.235.120', 54884)
+[tung:8001] Connection stabilized for ('172.17.235.120', 54882)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54883)
+[thuy:8004] Connection stabilized for ('172.17.235.120', 54884)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54882)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54883)
+[thuy:8004] Starting recv_input_stream for ('172.17.235.120', 54884)
+[tung:8001] Raw data received from ('172.17.235.120', 54882): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;"}
+[hung:8002] Raw data received from ('172.17.235.120', 54883): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;"}
+[tung:8001] Parsed JSON from ('172.17.235.120', 54882): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;'}
+[thuy:8004] Raw data received from ('172.17.235.120', 54884): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;"}
+[hung:8002] Parsed JSON from ('172.17.235.120', 54883): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;'}
+[tung:8001] Received friend list: tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;
+[thuy:8004] Parsed JSON from ('172.17.235.120', 54884): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;'}
+[tung:8001] Connection closed from ('172.17.235.120', 54882)
+[hung:8002] Connection closed from ('172.17.235.120', 54883)
+[thuy:8004] Received friend list: tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;
+[thuy:8004] Connection closed from ('172.17.235.120', 54884)
+[tung:8001] Connected to peer at port 8002
+[hung:8002] New connection from ('172.17.235.120', 54886)
+[tung:8001] Sent connect request to port 8002: {"type": "connect", "name": "tung"}
+
+[tung:8001] Sent fetch request to port 8002: {"type": "fetch", "name": "tung"}
+
+[hung:8002] Connection stabilized for ('172.17.235.120', 54886)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54886)
+[hung:8002] Raw data received from ('172.17.235.120', 54886): {"type": "connect", "name": "tung"}
+{"type": "fetch", "name": "tung"}
+
+[hung:8002] Parsed JSON from ('172.17.235.120', 54886): {'type': 'connect', 'name': 'tung'}
+[hung:8002] Peer tung requested connection
+[hung:8002] Parsed JSON from ('172.17.235.120', 54886): {'type': 'fetch', 'name': 'tung'}
+[hung:8002] Connected to peer at port 8001
+[tung:8001] New connection from ('172.17.235.120', 54887)
+[hung:8002] Sent connect request to port 8001: {"type": "connect", "name": "hung"}
+
+[hung:8002] Sent fetch request to port 8001: {"type": "fetch", "name": "hung"}
+
+[tung:8001] Connection stabilized for ('172.17.235.120', 54887)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54887)
+[tung:8001] Raw data received from ('172.17.235.120', 54887): {"type": "connect", "name": "hung"}
+{"type": "fetch", "name": "hung"}
+
+[tung:8001] Parsed JSON from ('172.17.235.120', 54887): {'type': 'connect', 'name': 'hung'}
+[tung:8001] Peer hung requested connection
+[tung:8001] Parsed JSON from ('172.17.235.120', 54887): {'type': 'fetch', 'name': 'hung'}
+[hung:8002] Sent message: hi
+[tung:8001] Raw data received from ('172.17.235.120', 54887): {"name": "hung", "type": "chat", "message": "hi"}
+
+[tung:8001] Parsed JSON from ('172.17.235.120', 54887): {'name': 'hung', 'type': 'chat', 'message': 'hi'}
+[tung:8001] Received chat from hung: hi
+[tung:8001] Sent message: hello
+[hung:8002] Raw data received from ('172.17.235.120', 54886): {"name": "tung", "type": "chat", "message": "hello"}
+
+[hung:8002] Parsed JSON from ('172.17.235.120', 54886): {'name': 'tung', 'type': 'chat', 'message': 'hello'}
+[hung:8002] Received chat from tung: hello
+[tung:8001] Peer shutting down.
+[hung:8002] Connection closed from ('172.17.235.120', 54886)
+[hung:8002] New connection from ('172.17.235.120', 54895)
+[thuy:8004] New connection from ('172.17.235.120', 54896)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54895)
+[thuy:8004] Connection stabilized for ('172.17.235.120', 54896)
+[hung:8002] Starting recv_input_stream for ('172.17.235.120', 54895)
+[thuy:8004] Starting recv_input_stream for ('172.17.235.120', 54896)
+[hung:8002] Raw data received from ('172.17.235.120', 54895): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:offline;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;"}
+[thuy:8004] Raw data received from ('172.17.235.120', 54896): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:offline;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;"}
+[hung:8002] Parsed JSON from ('172.17.235.120', 54895): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:offline;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;'}
+[thuy:8004] Parsed JSON from ('172.17.235.120', 54896): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:offline;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;'}
+[hung:8002] Received friend list: tung:8001:offline;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;
+[thuy:8004] Received friend list: tung:8001:offline;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;
+[hung:8002] Connection closed from ('172.17.235.120', 54895)
+[thuy:8004] Connection closed from ('172.17.235.120', 54896)
+[tung:8001] Created/Verified user folder: tung
+[tung:8001] Gemini API configured successfully
+[tung:8001] Peer registered with central server on port 8001
+[tung:8001] Peer started on port 8001
+[tung:8001] New connection from ('172.17.235.120', 54901)
+[hung:8002] New connection from ('172.17.235.120', 54902)
+[thuy:8004] New connection from ('172.17.235.120', 54903)
+[tung:8001] Connection stabilized for ('172.17.235.120', 54901)
+[hung:8002] Connection stabilized for ('172.17.235.120', 54902)
+[tung:8001] Starting recv_input_stream for ('172.17.235.120', 54901)
+[thuy:8004] Connection stabilized for ('172.17.235.120', 54903)
+[tung:8001] Raw data received from ('172.17.235.120', 54901): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;"}
+[thuy:8004] Starting recv_input_stream for ('172.17.235.120', 54903)
+[tung:8001] Parsed JSON from ('172.17.235.120', 54901): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;'}
+[thuy:8004] Raw data received from ('172.17.235.120', 54903): {"name": "HCMUT", "type": "central", "listFriend": "tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;"}
+[tung:8001] Received friend list: tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;
+[hung:8002] Parsed JSON from ('172.17.235.120', 54902): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;'}
+[tung:8001] Connection closed from ('172.17.235.120', 54901)
+[thuy:8004] Parsed JSON from ('172.17.235.120', 54903): {'name': 'HCMUT', 'type': 'central', 'listFriend': 'tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;'}
+[hung:8002] Received friend list: tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;
+[thuy:8004] Received friend list: tung:8001:online;hung:8002:online;vy:8003:offline;linh:8004:offline;thuy:8004:online;khang:8006:offline;
+[hung:8002] Connection closed from ('172.17.235.120', 54902)
+[thuy:8004] Connection closed from ('172.17.235.120', 54903)
+[tung:8001] Sent message: @bot
+[tung:8001] Processing bot message: @bot
+[tung:8001] Bot response: How can I help you?
+
+[tung:8001] Bot responded: How can I help you?
+
+[tung:8001] Sent message: @bot hãy giúp tôi
+[tung:8001] Processing bot message: @bot hãy giúp tôi
+[tung:8001] Bot response: Tôi có thể giúp gì cho bạn? Hãy cho tôi biết bạn cần gì.  Để tôi có thể giúp bạn tốt hơn, vui lòng mô tả vấn đề của bạn một cách chi tiết nhất có thể.
+
+[tung:8001] Bot responded: Tôi có thể giúp gì cho bạn? Hãy cho tôi biết bạn cần gì.  Để tôi có thể giúp bạn tốt hơn, vui lòng mô tả vấn đề của bạn một cách chi tiết nhất có thể.
+
