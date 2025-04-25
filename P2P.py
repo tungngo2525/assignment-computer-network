@@ -47,7 +47,7 @@ class Peer:
         
    
         try:
-            genai.configure(api_key="AIzaSyCCXRB4Em1SIedyzd_UbIdIbMD7FVLBXws")
+            genai.configure(api_key="Your key API")
             self.gemini_model = genai.GenerativeModel(model_name="models/gemini-1.5-flash-latest")
             self.log_event("Gemini API configured successfully")
         except Exception as e:
