@@ -1,212 +1,345 @@
-from tkinter import *
-from tkinter.ttk import *
+import tkinter as tk
+from tkinter.ttk import Style, Button
 from P2P import Peer
-from tkinter import filedialog, simpledialog
 from threading import Thread
 from PIL import ImageTk, Image
-import tkinter as tk
 import copy
 import socket
 import json
+import cv2
 
 peer = None
 flag = True
 friendList = None
 friends = []
+video_label = None
+cap = None
+is_streaming_locally = False
 
-def updateFriendList():
-    global peer, friendList, friends
+class MainWindow:
+    def __init__(self, root, name, port):
+        self.root = root
+        self.name = name
+        self.port = port
+        self.root.title('Bku Streaming ✿')
+        self.root.geometry("1080x600")
+        self.root.configure(bg='#2C2F33')
+        self.root.resizable(0, 0)
 
-    for widget in master.winfo_children():
-        if isinstance(widget, Button) and widget.cget('text') not in ['Log in', '➤', 'Browser', 'Channel Online']:
-            widget.destroy()
-        if isinstance(widget, Label) and widget.cget('text') in ['●']:
-            widget.destroy()
+        # Style setup
+        self.style = Style()
+        self.style.theme_use('default')
+        self.style.configure('TButton', font=('Segoe UI', 10), background='#7289DA', foreground='white')
+        self.style.map('TButton', background=[('active', '#5b6eae')])
+        self.style.configure('Friend.TButton', background='#99aab5', foreground='black')
+        self.style.map('Friend.TButton', background=[('active', '#ffffff')])
+        # Bỏ style Video.TButton, sử dụng Channel.TButton cho cả ba nút
+        self.style.configure('Channel.TButton', background='#7289DA', foreground='white')
+        self.style.map('Channel.TButton', background=[('active', '#5865F2')])
+        self.style.configure('Send.TButton', font=('Segoe UI', 10, 'bold'), background='#5865F2', foreground='white', padding=3)
+        self.style.map('Send.TButton', background=[('active', '#4752C4')])
 
-    if peer is None:
-        print("Debug: Peer is None - Please log in first")
-        return
+        # Title label
+        tk.Label(self.root, text="Bku Channel✿", font=("Helvetica", 25, "bold"), bg="#2C2F33", fg="white").place(x=430, y=15)
 
-    try:
-        if not hasattr(peer, 'listFriend') or not peer.listFriend:
-            print("Debug: No friend list available")
-            return
-        friendList = peer.listFriend.split(';')
-        print(f"Debug: Raw friend list: {peer.listFriend}")
-        print(f"Debug: Split friend list: {friendList}")
-    except Exception as e:
-        print(f"Debug: Error accessing friend list: {str(e)}")
-        return
+        # Video area
+        global video_label
+        video_label = tk.Label(self.root, bg="#23272A", bd=2, relief="groove")
+        video_label.place(x=150, y=100, width=615, height=420)
 
-    friends.clear()
+        # Chat area
+        chatArea = tk.Frame(self.root, bg="#2C2F33")
+        scroll = tk.Scrollbar(chatArea)
+        self.text = tk.Text(chatArea, font=("Georgia", 11), yscrollcommand=scroll.set, width=30, height=21.5, bg="#23272A", fg="white", insertbackground="white", bd=2, relief="solid", padx=5)
+        chatArea.place(x=775, y=100)
+        scroll.pack(side=tk.RIGHT, fill=tk.Y)
+        self.text.pack(side=tk.LEFT)
+        self.text.configure(state='disable')
 
-    if friendList and friendList[0]:
-        for i, friend_str in enumerate(friendList):
-            if not friend_str:
-                continue
-            friend = friend_str.split(":")
-            if len(friend) >= 2:
-                friends.append(copy.deepcopy(friend))
-                print(f"Debug: Friend {i}: {friend}")
+        # Định nghĩa các tag màu sắc
+        self.text.tag_configure("username", foreground="#00FF00")
+        self.text.tag_configure("message", foreground="white")
+        self.text.tag_configure("connect", foreground="blue", font=("Georgia", 12, "bold"))
+        self.text.tag_configure("error", foreground="red")
 
-                is_online = len(friend) >= 3 and friend[2].lower() == "online"
-                status_color = "#43B581" if is_online else "black"
+        # Chat input frame
+        chatFrame = tk.Frame(self.root, bg="#2C2F33")
+        chatFrame.place(x=775, y=490)
+        self.chatBox = tk.Entry(chatFrame, width=31, font=("Segoe UI", 10), bg="#99aab5", fg="black")
+        self.chatBox.pack(side=tk.LEFT, padx=(0, 5), pady=5, ipady=2)
+        sendButton = Button(chatFrame, text="➤", command=self.SendMessage, style='Send.TButton')
+        sendButton.pack(side=tk.LEFT, ipadx=2)
 
-                status_dot = Label(master, text="●", foreground=status_color, font=("Arial", 15))
-                status_dot.place(x=7, y=(i + 1) * 31 + 100)
+        # Bind keys
+        self.root.bind('<Shift-Return>', lambda event: self.chatBox.insert(tk.END, '\n'))
+        self.root.bind('<Return>', self.SendMessage)
 
-                Button(
-                    master,
-                    text=friends[i][0],
-                    command=lambda b=friends[i][1]: RunClient(b),
-                    width=13,
-                    style='Friend.TButton'
-                ).place(x=21, y=(i + 1) * 30 + 100)
-            else:
-                print(f"Debug: Invalid friend format at index {i}: {friend}")
-    else:
-        print("Debug: Friend list is empty or invalid")
+        # Buttons - Sử dụng Channel.TButton cho cả Start Stream, Stop Stream và Channel Online
+        Button(self.root, text="Start Stream", command=self.StartVideoStream, style='Channel.TButton').place(x=150, y=525, width=120, height=30)
+        Button(self.root, text="Stop Stream", command=self.StopVideoStream, style='Channel.TButton').place(x=270, y=525, width=120, height=30)
+        Button(self.root, text="Channel Online", command=self.updateFriendList, style='Channel.TButton').place(x=18, y=100, width=130, height=30)
 
-def RunServer():
-    global flag, peer
-    print("Starting Server")
-    if not flag:
-        return
+        # Khởi tạo Peer sau khi các widget đã được tạo
+        self.initialize_peer()
 
-    name = nameEntry.get()
-    port = portEntry.get()
+        self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
 
-    if name and port:
+    def initialize_peer(self):
+        global peer, flag
         try:
-            nameEntry.configure(state='readonly')
-            portEntry.configure(state='readonly')
-            peer = Peer(name, int(port), text)
-            print("Create Server")
+            peer = Peer(self.name, self.port, self.text, video_label)
             peer.startServer()
-            print("Run Server")
             flag = False
         except Exception as e:
+            self.log_to_ui(f"Failed to start server: {str(e)}\n", "error")
             print(f"Fail Server: {str(e)}")
-            nameEntry.configure(state='normal')
-            portEntry.configure(state='normal')
-    else:
-        print("Debug: Name or Port is empty")
+            self.root.destroy()
 
-def RunClient(port):
-    global flag, peer
-    print("Starting client")
-    if flag or peer is None:
-        return
-    try:
-        peer.startClient(port)
-        print("Run client")
-    except Exception as e:
-        print(f"Fail client: {str(e)}")
+    def log_to_ui(self, message, tag=None):
+        self.text.configure(state='normal')
+        self.text.insert(tk.END, message, tag)
+        self.text.see(tk.END)
+        self.text.configure(state='disable')
 
-def SendMessage():
-    global flag, peer
-    print("Starting send")
-    if flag or peer is None:
-        return
-    if chatBox.get().strip():
+    def updateFriendList(self):
+        global peer, friendList, friends
+        if peer is None:
+            self.log_to_ui("Error: Peer not initialized\n", "error")
+            return
+
+        for widget in self.root.winfo_children():
+            if isinstance(widget, Button) and widget.cget('text') not in ['Log in', '➤', 'Browser', 'Channel Online', 'Start Stream', 'Stop Stream']:
+                widget.destroy()
+            if isinstance(widget, tk.Label) and widget.cget('text') == '●':
+                widget.destroy()
+
+        if not hasattr(peer, 'listFriend') or not peer.listFriend:
+            self.log_to_ui("No friends online\n", "message")
+            return
+
+        friendList = peer.listFriend.split(';')
+        friends.clear()
+        if friendList and friendList[0]:
+            for i, friend_str in enumerate(friendList):
+                if not friend_str:
+                    continue
+                friend = friend_str.split(":")
+                if len(friend) >= 2:
+                    friends.append(copy.deepcopy(friend))
+                    is_online = len(friend) >= 3 and friend[2].lower() == "online"
+                    status_color = "#43B581" if is_online else "gray"
+
+                    tk.Label(self.root, text="●", fg=status_color, bg="#2C2F33", font=("Arial", 14)).place(x=15, y=(i + 1) * 35 + 100)
+                    Button(self.root, text=friends[i][0], command=lambda b=friends[i][1]: self.RunClient(b), width=15, style='Friend.TButton').place(x=30, y=(i + 1) * 35 + 100)
+
+    def RunClient(self, port):
+        global flag, peer
+        if flag or peer is None:
+            self.log_to_ui("Error: Peer not initialized\n", "error")
+            return
         try:
-            peer.sendMessage(chatBox.get().strip())
-            chatBox.delete(0, END)
-            print("SendMessage")
+            peer.startClient(port)
         except Exception as e:
-            print(f"Fail sending message: {str(e)}")
+            self.log_to_ui(f"Failed to connect to peer at port {port}: {str(e)}\n", "error")
+            print(f"Fail client: {str(e)}")
 
-def OpenFile():
-    filepath = filedialog.askopenfilename()
-    fileBox.configure(state='normal')
-    fileBox.delete(0, END)
-    fileBox.insert(0, filepath)
-    fileBox.configure(state='readonly')
+    def SendMessage(self, event=None):
+        global flag, peer
+        if flag or peer is None:
+            self.log_to_ui("Error: Peer not initialized\n", "error")
+            return
+        if self.chatBox.get().strip():
+            try:
+                peer.sendMessage(self.chatBox.get().strip())
+                self.chatBox.delete(0, tk.END)
+            except Exception as e:
+                self.log_to_ui(f"Failed to send message: {str(e)}\n", "error")
+                print(f"Fail sending message: {str(e)}")
 
-def SendFile():
-    global peer
-    if peer is None:
-        return
-    try:
-        if fileBox.get():
-            peer.sendFile(fileBox.get())
-    except Exception as e:
-        print(f"Fail sending file: {str(e)}")
+    def StartVideoStream(self):
+        global peer, cap, is_streaming_locally
+        if peer is None:
+            self.log_to_ui("Error: Peer not initialized\n", "error")
+            print("Peer not initialized.")
+            return
 
-def on_closing():
-    global peer, flag
-    flag = False
-    if peer is not None:
-        peer.endSystem()
         try:
-            offline_socket = socket.socket()
-            offline_socket.connect((peer.address, peer.centralServerPort))
-            data = json.dumps({"name": peer.name, "port": str(peer.port), "status": "offline"})
-            offline_socket.send(data.encode('utf-8'))
-            offline_socket.close()
+            peer.startVideoStream()
+            self.log_to_ui("Video stream started\n", "message")
+            print("Video stream started.")
         except Exception as e:
-            print(f"Error notifying offline status: {e}")
-    master.destroy()
+            self.log_to_ui(f"Error starting video stream: {str(e)}\n", "error")
+            print(f"Error starting video stream: {str(e)}")
+            return
 
-master = Tk()
-master.title('Bku Streaming ✿')
-master.geometry("600x500")
-master.resizable(0, 0)
+        # Chỉ chạy local stream nếu không nhận video từ peer khác
+        if not peer.receiving_video and not is_streaming_locally:
+            is_streaming_locally = True
+            cap = cv2.VideoCapture(0)
+            if not cap.isOpened():
+                self.log_to_ui("Error: Could not open video stream\n", "error")
+                print("Error: Could not open video stream.")
+                is_streaming_locally = False
+                return
 
-style = Style()
-style.theme_use('default')
-style.configure('TButton', font=('Segoe UI', 10), background='white', foreground='black')
-style.map('TButton', background=[('active', '#4752C4')])
-style.configure('Friend.TButton', font=('Segoe UI', 10), background='#999bad', foreground='black')
-style.map('Friend.TButton', background=[('active', 'white')])
+            def update_frame():
+                global cap, is_streaming_locally
+                if not is_streaming_locally or peer.receiving_video or not cap or not cap.isOpened():
+                    if cap:
+                        cap.release()
+                        cap = None
+                    video_label.configure(image='')
+                    return
 
-# Server inputs
-Label(master, text="Name:", width=10).place(x=10, y=10)
-Label(master, text="Port:", width=10).place(x=10, y=40)
-nameEntry = Entry(master, width=33)
-portEntry = Entry(master, width=20)
-nameEntry.place(x=50, y=10)
-portEntry.place(x=50, y=40)
-Button(master, text="Log in", command=RunServer).place(x=180, y=40)
+                ret, frame = cap.read()
+                if ret:
+                    # Resize frame để khớp với video_label
+                    height, width = frame.shape[:2]
+                    target_width, target_height = 615, 420
+                    target_ratio = target_width / target_height
+                    frame_ratio = width / height
+                    if frame_ratio > target_ratio:
+                        new_height = target_height
+                        new_width = int(new_height * frame_ratio)
+                    else:
+                        new_width = target_width
+                        new_height = int(new_width / frame_ratio)
+                    frame = cv2.resize(frame, (new_width, new_height), interpolation=cv2.INTER_AREA)
+                    x_offset = (new_width - target_width) // 2
+                    y_offset = (new_height - target_height) // 2
+                    frame = frame[y_offset:y_offset + target_height, x_offset:x_offset + target_width]
 
-# App title
-Label(master, text="Bku Channel✿", width=15, font=("Helvetica", 25, "bold"), background="#82CAFA", foreground="black", anchor="center").place(x=290, y=15)
+                    frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+                    img = Image.fromarray(frame)
+                    img_tk = ImageTk.PhotoImage(img)
+                    video_label.img_tk = img_tk
+                    video_label.configure(image=img_tk)
+                    video_label.after(33, update_frame)  # 30 FPS
+                else:
+                    
+                
+                    if cap:
+                        cap.release()
+                        cap = None
+                    video_label.configure(image='')
+                    is_streaming_locally = False
 
-# Chat area
-chatArea = Frame(master, width=50, height=50)
-scroll = Scrollbar(chatArea)
-text = Text(chatArea, font=("Georgia", 12), yscrollcommand=scroll.set, width=44, height=17, bg="white", fg="black")
-chatArea.place(x=130, y=100)
-scroll.pack(side=RIGHT, fill=Y)
-text.pack(side=LEFT)
-text.configure(state='disable')
+            video_label.after(0, update_frame)
 
-# Send message
-Label(master, text="Message:", width=10).place(x=125, y=460)
-chatBox = Entry(master, width=50)
-chatBox.place(x=190, y=460)
-Button(master, text="➤", command=SendMessage).place(x=500, y=460)
-master.bind('<Return>', lambda event: SendMessage())
+    def StopVideoStream(self):
+        global peer, cap, is_streaming_locally
+        if peer is None:
+            self.log_to_ui("Error: Peer not initialized\n", "error")
+            print("Peer not initialized.")
+            return
 
-# Send file
-Label(master, text="File:", width=10).place(x=125, y=420)
-fileBox = Entry(master, width=37)
-fileBox.place(x=190, y=420)
-fileBox.configure(state='readonly')
-Button(master, text="Browser", command=OpenFile).place(x=420, y=420)
-Button(master, text="➤", command=SendFile).place(x=500, y=420)
+        try:
+            peer.stopVideoStream()
+            is_streaming_locally = False
+            print("Video stream stopped.")
+        except Exception as e:
+            self.log_to_ui(f"Error stopping video stream: {str(e)}\n", "error")
+            print(f"Error stopping video stream: {str(e)}")
 
-style.configure('Channel.TButton', background='#7289DA', foreground='white')
-style.map('Channel.TButton',
-          background=[('active', '#444477')],
-          foreground=[('active', 'white')])
-Button(
-    master,
-    text="Channel Online",
-    command=updateFriendList,
-    style='Channel.TButton'
-).place(x=5, y=100, width=120, height=30)
+        if cap:
+            cap.release()
+            cap = None
+        video_label.configure(image='')
 
+    def on_closing(self):
+        global peer, flag, cap
+        flag = False
+        if cap:
+            cap.release()
+            cap = None
+        if peer:
+            peer.endSystem()
+            try:
+                offline_socket = socket.socket()
+                offline_socket.connect((peer.address, peer.centralServerPort))
+                data = json.dumps({"name": peer.name, "port": str(peer.port), "status": "offline"})
+                offline_socket.send(data.encode('utf-8'))
+                offline_socket.close()
+            except Exception as e:
+                self.log_to_ui(f"Error notifying offline status: {str(e)}\n", "error")
+                print(f"Error notifying offline status: {e}")
+        self.root.destroy()
 
-master.protocol("WM_DELETE_WINDOW", on_closing)
-mainloop()
+class LoginWindow:
+    def __init__(self, root):
+        self.root = root
+        self.root.title('Login - Bku Streaming ✿')
+        self.root.geometry("400x300")
+        self.root.configure(bg='#2C2F33')
+        self.root.resizable(0, 0)
+
+        # Style setup
+        self.style = Style()
+        self.style.theme_use('default')
+        self.style.configure('Login.TButton', font=('Segoe UI', 12, 'bold'), background='#5865F2', foreground='white', padding=8)
+        self.style.map('Login.TButton', background=[('active', '#4752C4')])
+        self.style.configure('TEntry', fieldbackground='#40444B', foreground='white', font=('Segoe UI', 12))
+        self.style.map('TEntry', fieldbackground=[('focus', '#4A4F56')])
+
+        # Title label
+        tk.Label(self.root, text="Bku Streaming ✿ Login", font=("Helvetica", 18, "bold"), bg="#2C2F33", fg="white").place(relx=0.5, y=40, anchor="center")
+
+        # Name frame
+        nameFrame = tk.Frame(self.root, bg="#2C2F33")
+        nameFrame.place(relx=0.48, y=90, anchor="center")
+        tk.Label(nameFrame, text="Name:", font=('Segoe UI', 12), fg="white", bg="#2C2F33").pack(side=tk.LEFT, padx=5)
+        self.nameEntry = tk.Entry(nameFrame, width=20, font=('Segoe UI', 12), bg="#40444B", fg="white", insertbackground="white", bd=2, relief="flat")
+        self.nameEntry.pack(side=tk.LEFT)
+
+        # Port frame
+        portFrame = tk.Frame(self.root, bg="#2C2F33")
+        portFrame.place(relx=0.5, y=130, anchor="center")
+        tk.Label(portFrame, text="Port:", font=('Segoe UI', 12), fg="white", bg="#2C2F33").pack(side=tk.LEFT, padx=5)
+        self.portEntry = tk.Entry(portFrame, width=20, font=('Segoe UI', 12), bg="#40444B", fg="white", insertbackground="white", bd=2, relief="flat")
+        self.portEntry.pack(side=tk.LEFT)
+
+        # Error label
+        self.errorLabel = tk.Label(self.root, text="", font=('Segoe UI', 10), fg="red", bg="#2C2F33", wraplength=350)
+        self.errorLabel.place(relx=0.5, y=170, anchor="center")
+
+        # Login button
+        Button(self.root, text="Log in", style='Login.TButton', command=self.RunServer).place(relx=0.5, y=220, anchor="center")
+
+        self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
+
+    def RunServer(self):
+        global flag
+        if not flag:
+            return
+        name = self.nameEntry.get()
+        port = self.portEntry.get()
+        if name and port:
+            try:
+                port = int(port)
+                self.nameEntry.configure(state='readonly')
+                self.portEntry.configure(state='readonly')
+                self.root.destroy()
+                main_root = tk.Tk()
+                app = MainWindow(main_root, name, port)
+                main_root.mainloop()
+            except ValueError:
+                self.errorLabel.config(text="Port must be a valid integer")
+                self.nameEntry.configure(state='normal')
+                self.portEntry.configure(state='normal')
+            except Exception as e:
+                self.errorLabel.config(text=f"Login failed: {str(e)}")
+                self.nameEntry.configure(state='normal')
+                self.portEntry.configure(state='normal')
+        else:
+            self.errorLabel.config(text="Please enter both Name and Port")
+            self.nameEntry.configure(state='normal')
+            self.portEntry.configure(state='normal')
+
+    def on_closing(self):
+        self.root.destroy()
+
+# Khởi tạo cửa sổ đăng nhập
+if __name__ == "__main__":
+    login_root = tk.Tk()
+    login_app = LoginWindow(login_root)
+    login_root.mainloop()
